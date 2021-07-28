@@ -879,4 +879,5 @@ if __name__ == '__main__':
 		sys.exit(1)
 	print "Please enter CCG trees:"
 	for line in sys.stdin:
+		print line
 		print convert(trees.CCG_Tree(line.strip()), sys.argv)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 
-import sys, re
-import trees, category, rule
+import sys
+import trees
 import analysis
 import span_dict
 import trivial, markup_convert
@@ -92,7 +92,8 @@ def compare_words(pwords, cwords):
 			match += 1
 	return float(match) / len(cwords)
 
-def print_stats(stats_name, gold_nodes, auto_nodes, match_brackets, match_labels, correct_sentences, correct_sentences_brackets, total_sentences):
+def print_stats(stats_name, gold_nodes, auto_nodes, match_brackets, match_labels, 
+correct_sentences, correct_sentences_brackets, total_sentences):
 	p_brac, r_brac, f_brac = calc_prf(match_brackets, auto_nodes, gold_nodes)
 	p_labe, r_labe, f_labe = calc_prf(match_labels, auto_nodes, gold_nodes)
 	print >> log_out, stats_name, "counts:      ", gold_nodes, auto_nodes, '  ', match_brackets, match_labels
@@ -144,13 +145,13 @@ if __name__ == '__main__':
 	correct_sentences = 0
 	correct_sentences_brackets = 0
 	print_trees = "-print_comparison" in args
-	ptb_source = open(sys.argv[1])
-	ccg_source = open(sys.argv[2])
+	#ptb_source = open(sys.argv[1])
+	ccg_source = open(sys.argv[1])
 	for i in xrange(total_sentences):
 		source = trees.read_CCG_tree(ccg_source)
-		target = trees.read_PTB_tree(ptb_source)
-###		print source
-		if source is None or target is None:
+		#target = trees.read_PTB_tree(ptb_source)
+		###print target
+		if source is None: #or target is None:
 			total_sentences = i
 			break
 
@@ -162,29 +163,30 @@ if __name__ == '__main__':
 			# only evaluate on sentences that receive a parse
 			continue
 
-		pwords = target.get_words()
+		#pwords = target.get_words()
 		cwords = source.get_words()
-		if len(cwords) != 0:
-			while compare_words(pwords, cwords) < 0.7:
-				if not only_parsed:
-					if gold_out is not None:
-						print >> gold_out, target.one_line_repr()
-						print >> tree_out
-				target = trees.read_PTB_tree(ptb_source)
-				if target is None:
-					print >> sys.stderr, "Ran out of sentences trying to find a match"
-					sys.exit(2)
-				pwords = target.get_words()
 
-		if max_sent_length > 0 and len(pwords) > max_sent_length:
-			continue
+		#if len(cwords) != 0:
+		#	while compare_words(pwords, cwords) < 0.7:
+		#		if not only_parsed:
+		#			if gold_out is not None:
+		#				print >> gold_out, target.one_line_repr()
+		#				print >> tree_out
+				#target = trees.read_PTB_tree(ptb_source)
+				#if target is None:
+				#	print >> sys.stderr, "Ran out of sentences trying to find a match"
+				#	sys.exit(2)
+				#pwords = target.get_words()
 
-		if target.label == '':
-			target.label = 'ROOT'
+		#if max_sent_length > 0 and len(pwords) > max_sent_length:
+		#	continue
+
+		#if target.label == '':
+	#		target.label = 'ROOT'
 
 		if print_trees:
 			print >> log_out, source
-			print >> log_out, target
+			#print >> log_out, target
 		use, auto_ptb, auto_schema = (False, None, None)
 		if 'method' in args:
 			method_name = args.split('method=')[1].split()[0]
@@ -196,31 +198,31 @@ if __name__ == '__main__':
 
 		if not use:
 			print >> log_out, "Not being included"
-		if auto_schema is not None:
-			analysis.analyse(source, target, auto_ptb, auto_schema, analysis_out)
+		#if auto_schema is not None:
+		#	analysis.analyse(source, target, auto_ptb, auto_schema, analysis_out)
 		if tree_out is not None:
 			if use:
-				print >> gold_out, target.one_line_repr()
+				#print >> gold_out, target.one_line_repr()
 				print >> tree_out, auto_ptb.one_line_repr()
 			elif not only_parsed:
-				print >> gold_out, target.one_line_repr()
+			#	print >> gold_out, target.one_line_repr()
 				print >> tree_out
 
 		if print_trees:
 			print >> log_out, auto_ptb
 			if colour_out is not None:
 				print >> colour_out, source
-				print >> colour_out, auto_ptb.repr_with_corrections(target)
+				#print >> colour_out, auto_ptb.repr_with_corrections(target)
 
-		scores = score_count(target, auto_ptb)
-		gold_nodes += scores[0]
-		auto_nodes += scores[1]
-		match_brackets += scores[2]
-		match_labels += scores[3]
-		if scores[0] == scores[1] == scores[2]:
-			correct_sentences_brackets += 1
-		if scores[0] == scores[1] == scores[3]:
-			correct_sentences += 1
-		print_stats('', scores[0], scores[1], scores[2], scores[3], correct_sentences, correct_sentences_brackets,  i + 1)
-		print_stats('cumulative', gold_nodes, auto_nodes, match_brackets, match_labels, correct_sentences, correct_sentences_brackets, i + 1)
-	print_stats('final', gold_nodes, auto_nodes, match_brackets, match_labels, correct_sentences, correct_sentences_brackets, total_sentences)
+		#scores = score_count(target, auto_ptb)
+		#gold_nodes += scores[0]
+		#auto_nodes += scores[1]
+		#match_brackets += scores[2]
+		#match_labels += scores[3]
+		#if scores[0] == scores[1] == scores[2]:
+	#		correct_sentences_brackets += 1
+		#if scores[0] == scores[1] == scores[3]:
+	#		correct_sentences += 1
+		#print_stats('', scores[0], scores[1], scores[2], scores[3], correct_sentences, correct_sentences_brackets,  i + 1)
+		#print_stats('cumulative', gold_nodes, auto_nodes, match_brackets, match_labels, correct_sentences, correct_sentences_brackets, i + 1)
+	#print_stats('final', gold_nodes, auto_nodes, match_brackets, match_labels, correct_sentences, correct_sentences_brackets, total_sentences)
