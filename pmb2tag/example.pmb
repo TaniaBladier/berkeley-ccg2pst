@@ -1,0 +1,19 @@
+:- op(601, xfx, (/)).
+:- op(601, xfx, (\)).
+:- multifile ccg/2, id/2.
+:- discontiguous ccg/2, id/2.
+
+ccg(1,
+ fa(s:wq,
+  t(s:wq/(s:q/np), 'Who', [from:0, to:3, pos:'WP', lemma:'person', sem:'QUE', wordnet:'person.n.01', verbnet:['Name']]),
+  fc(s:q/np,
+   fa(s:q/(s:b\np),
+    t((s:q/(s:b\np))/np, 'does', [from:4, to:8, pos:'VBZ', lemma:'do', sem:'NOW', wordnet:'O']),
+    fa(np,
+     t(np/n, 'this', [from:9, to:13, pos:'DT', lemma:'this', sem:'PRX', wordnet:'O']),
+     t(n, 'guitar', [from:14, to:20, pos:'NN', lemma:'guitar', sem:'CON', wordnet:'guitar.n.01']))),
+   fc((s:b\np)/np,
+    t((s:b\np)/pp, 'belong', [from:21, to:27, pos:'VB', lemma:'belong', sem:'EXS', wordnet:'belong.v.01', verbnet:['Theme']]),
+    rp(pp/np,
+     t(pp/np, 'to', [from:28, to:30, pos:'TO', lemma:'to', sem:'REL', wordnet:'O', verbnet:['Pivot']]),
+     t(., '?', [from:30, to:31, pos:'.', lemma:'?', sem:'QUE', wordnet:'O'])))))).
