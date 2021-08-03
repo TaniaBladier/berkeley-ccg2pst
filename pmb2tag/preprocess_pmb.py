@@ -63,8 +63,8 @@ def readFile_ccg_prolog(path):
             sentences.append(' '.join(sentence)[:-1].replace('CONJ', 'conj'))
     return sentences
 
-#input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
-input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb-3.0.0-en-gold-p03.parse.tags'
+input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
+#input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb-3.0.0-en-gold-p03.parse.tags'
 
 output_ccgbank_style = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb_in_ccgbank_format.pmb'
 outf = open(output_ccgbank_style, 'w')
