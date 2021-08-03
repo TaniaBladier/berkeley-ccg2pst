@@ -36,7 +36,7 @@ def readFile_ccg_prolog(path):
                 # find the lexical element
                 lex = line.split(', ')[1].replace("'", "").replace('(','-LRB-').replace(')','-RRB-')
 
-                pos_tag = re.sub(r".+pos:'([A-Z.]+)'.+", r'\1', line)
+                pos_tag = re.sub(r".+pos:'([A-Z.$]+)'.+", r'\1', line)
 
                 ccg_cat = line.split(',')[0].replace('t(','').strip().upper()
                 ccg_cat = re.sub(r":([A-Z.]+)", lambda m: m.expand(r'[\1]').lower() , ccg_cat)
@@ -54,8 +54,8 @@ def readFile_ccg_prolog(path):
                     first_cat = re.sub(r"^([A-Z]+)\(.+", r"\1", line)
                     ccg_cat = re.sub(r"^[A-Z]+\((.+)", r"\1", line)[:-1]
                     ccg_cat = re.sub(r":([A-Z.]+)", lambda m: m.expand(r'[\1]').lower() , ccg_cat)
-
-                    print(first_cat)
+                    ccg_cat = ccg_cat.split(',')[0]
+                    #print(first_cat)
                     print(ccg_cat)
                     w = '(<' + first_cat + ' ' + ccg_cat + '>'
                     sentence.append(w)
@@ -63,7 +63,8 @@ def readFile_ccg_prolog(path):
             sentences.append(' '.join(sentence)[:-1])
     return sentences
 
-input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
+#input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
+input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb-3.0.0-en-gold-p03.parse.tags'
 
 output_ccgbank_style = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb_in_ccgbank_format.pmb'
 outf = open(output_ccgbank_style, 'w')
@@ -71,7 +72,7 @@ outf = open(output_ccgbank_style, 'w')
 ccg_trees_lst = readFile_ccg_prolog(input_ccg_file)
 
 for x in ccg_trees_lst:
-    outf.write(x)
-c
+    outf.write(x + '\n')
+
 
 outf.close()

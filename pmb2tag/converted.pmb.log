@@ -2,118 +2,4584 @@
 # ../convert.py pmb_in_ccgbank_format.pmb -prefix=converted.pmb -verbose -method=markedup ../markedup
 
 using lex combiantor rule
-resolved: (WHNP (WP Who))
- schema: (WHNP 100)  cur: (WHNP (WP Who))  incomplete:
-(SBARQ 0 1)
+resolved: (NP (DT The))
+ schema: (NP 100 {101})  cur: (NP (DT The) {101})  incomplete: ({101}, self)
 
 using lex combiantor rule
-resolved: (SQ (VBZ does))
- schema: (SQ 101 102)  cur: (SQ (VBZ does) 102)  incomplete: (102, self)
-(SQ {0} 1)
+resolved: (N (NN woman))
+ schema: (N 102)  cur: (N (NN woman))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT The))
+ schema: (NP 100 {101})  cur: (NP (DT The) {101})  incomplete: ({101}, self)
+(N (NN woman))
+ schema: (N 102)  cur: (N (NN woman))  incomplete:
+resolved: (NP (DT The) (NN woman))
+ schema: (NP 100 {101})  cur: (NP (DT The) (NN woman))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ is))
+ schema: (VP 103 104)  cur: (VP (VBZ is) 104)  incomplete: (104, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (RB not)
+ schema: {(TEMP 105)}  cur: {(TEMP (RB not))}  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using cc.b combiantor rule
+(VP (VBZ is))
+ schema: (VP 103 104)  cur: (VP (VBZ is) 104)  incomplete: (104, self)
+(S 1 0)
+(RB not)
+ schema: {(TEMP 105)}  cur: {(TEMP (RB not))}  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBZ is) (RB not))
+ schema: (VP 103 104)  cur: (VP (VBZ is) (RB not) 104)  incomplete: (104, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBG playing))
+ schema: (VP 108 109)  cur: (VP (VBG playing) 109)  incomplete: (109, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (DT an))
+ schema: (NP 110 {111})  cur: (NP (DT an) {111})  incomplete: ({111}, self)
+
+using lex combiantor rule
+resolved: (N (NN electric~guitar))
+ schema: (N 112)  cur: (N (NN electric~guitar))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT an))
+ schema: (NP 110 {111})  cur: (NP (DT an) {111})  incomplete: ({111}, self)
+(N (NN electric~guitar))
+ schema: (N 112)  cur: (N (NN electric~guitar))  incomplete:
+resolved: (NP (DT an) (NN electric~guitar))
+ schema: (NP 110 {111})  cur: (NP (DT an) (NN electric~guitar))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBG playing))
+ schema: (VP 108 109)  cur: (VP (VBG playing) 109)  incomplete: (109, self)
+(S 1 0)
+(NP (DT an) (NN electric~guitar))
+ schema: (NP 110 {111})  cur: (NP (DT an) (NN electric~guitar))  incomplete:
+resolved: (VP (VBG playing) (NP (DT an) (NN electric~guitar)))
+ schema: (VP 108 109)  cur: (VP (VBG playing) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ is) (RB not))
+ schema: (VP 103 104)  cur: (VP (VBZ is) (RB not) 104)  incomplete: (104, self)
+(S 1 0)
+(VP (VBG playing) (NP (DT an) (NN electric~guitar)))
+ schema: (VP 108 109)  cur: (VP (VBG playing) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBZ is) (RB not) (VP (VBG playing) (NP (DT an) (NN electric~guitar))))
+ schema: (VP 103 104)  cur: (VP (VBZ is) (RB not) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (DT The) (NN woman))
+ schema: (NP 100 {101})  cur: (NP (DT The) (NN woman))  incomplete:
+(VP (VBZ is) (RB not) (VP (VBG playing) (NP (DT an) (NN electric~guitar))))
+ schema: (VP 103 104)  cur: (VP (VBZ is) (RB not) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (DT The) (NN woman)) (VP (VBZ is) (RB not) (VP (VBG playing) (NP (DT an) (NN electric~guitar)))))
+ schema: (S 113 114)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(DT The)
+			(NN woman))
+		(VP
+			(VBZ is)
+			(RB not)
+			(VP
+				(VBG playing)
+				(NP
+					(DT an)
+					(NN electric~guitar))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(DT The)
+			(NN woman))
+		(VP
+			(VBZ is)
+			(RB not)
+			(VP
+				(VBG playing)
+				(NP
+					(DT an)
+					(NN electric~guitar))))))
+
+using lex combiantor rule
+resolved: (Nslash (JJ Dutch))
+ schema: (Nslash 115)  cur: (Nslash (JJ Dutch))  incomplete:
+(N {0} {1}) POS:default
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NNS photos))
+ schema: (NP 116 117)  cur: (NP (NNS photos) 117)  incomplete: (117, self)
+(N 0)
+
+using lex combiantor rule
+resolved: (PP (IN of))
+ schema: (PP 118 119)  cur: (PP (IN of) 119)  incomplete: (119, self)
+
+using lex combiantor rule
+resolved: (N (NNP Srebrenica))
+ schema: (N 120)  cur: (N (NNP Srebrenica))  incomplete:
+
+using unary combiantor rule
+(N (NNP Srebrenica))
+ schema: (N 120)  cur: (N (NNP Srebrenica))  incomplete:
+Unary schema:
+ schema: (NP {121})  cur: (NP {121})  incomplete: ({121}, self)
+resolved: (NP (NNP Srebrenica))
+ schema: (NP {121})  cur: (NP (NNP Srebrenica))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN of))
+ schema: (PP 118 119)  cur: (PP (IN of) 119)  incomplete: (119, self)
+(NP (NNP Srebrenica))
+ schema: (NP {121})  cur: (NP (NNP Srebrenica))  incomplete:
+resolved: (PP (IN of) (NP (NNP Srebrenica)))
+ schema: (PP 118 119)  cur: (PP (IN of) obj)  incomplete:
+
+using fa.f combiantor rule
+(NP (NNS photos))
+ schema: (NP 116 117)  cur: (NP (NNS photos) 117)  incomplete: (117, self)
+(N 0)
+(PP (IN of) (NP (NNP Srebrenica)))
+ schema: (PP 118 119)  cur: (PP (IN of) obj)  incomplete:
+resolved: (NP (NNS photos) (PP (IN of) (NP (NNP Srebrenica))))
+ schema: (NP 116 117)  cur: (NP (NNS photos) obj)  incomplete:
+(N 0)
+
+using fa.f combiantor rule
+(Nslash (JJ Dutch))
+ schema: (Nslash 115)  cur: (Nslash (JJ Dutch))  incomplete:
+(N {0} {1}) POS:default
+(NP (NNS photos) (PP (IN of) (NP (NNP Srebrenica))))
+ schema: (NP 116 117)  cur: (NP (NNS photos) obj)  incomplete:
+(N 0)
+resolved: (N (JJ Dutch) (NNS photos) (PP (IN of) (NP (NNP Srebrenica))))
+ schema: (N {122} {123})  cur: (N (JJ Dutch) (NNS photos) obj)  incomplete:
+
+using unary combiantor rule
+(N (JJ Dutch) (NNS photos) (PP (IN of) (NP (NNP Srebrenica))))
+ schema: (N {122} {123})  cur: (N (JJ Dutch) (NNS photos) obj)  incomplete:
+Unary schema:
+ schema: (NP {124})  cur: (NP {124})  incomplete: ({124}, self)
+resolved: (NP (JJ Dutch) (NNS photos) (PP (IN of) (NP (NNP Srebrenica))))
+ schema: (NP {124})  cur: (NP (JJ Dutch) (NNS photos) obj)  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBP have))
+ schema: (VP 125 126)  cur: (VP (VBP have) 126)  incomplete: (126, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBN disappeared))
+ schema: (VP 127)  cur: (VP (VBN disappeared))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBP have))
+ schema: (VP 125 126)  cur: (VP (VBP have) 126)  incomplete: (126, self)
+(S 1 0)
+(VP (VBN disappeared))
+ schema: (VP 127)  cur: (VP (VBN disappeared))  incomplete:
+(S 1 0)
+resolved: (VP (VBP have) (VP (VBN disappeared)))
+ schema: (VP 125 126)  cur: (VP (VBP have) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 128)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (VBP have) (VP (VBN disappeared)))
+ schema: (VP 125 126)  cur: (VP (VBP have) obj)  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 128)}  cur: {(. (. .))}  incomplete:
+have .
+resolved: (VP (VBP have) (VP (VBN disappeared)) (. .))
+ schema: (VP 125 126)  cur: (VP (VBP have) obj (. .))  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (JJ Dutch) (NNS photos) (PP (IN of) (NP (NNP Srebrenica))))
+ schema: (NP {124})  cur: (NP (JJ Dutch) (NNS photos) obj)  incomplete:
+(VP (VBP have) (VP (VBN disappeared)) (. .))
+ schema: (VP 125 126)  cur: (VP (VBP have) obj (. .))  incomplete:
+(S 1 0)
+resolved: (S (NP (JJ Dutch) (NNS photos) (PP (IN of) (NP (NNP Srebrenica)))) (VP (VBP have) (VP (VBN disappeared)) (. .)))
+ schema: (S 129 130)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(JJ Dutch)
+			(NNS photos)
+			(PP
+				(IN of)
+				(NP
+					(NNP Srebrenica))))
+		(VP
+			(VBP have)
+			(VP
+				(VBN disappeared))
+			(. .))))
+cleaned: (ROOT
+	(S
+		(NP
+			(JJ Dutch)
+			(NNS photos)
+			(PP
+				(IN of)
+				(NP
+					(NNP Srebrenica))))
+		(VP
+			(VBP have)
+			(VP
+				(VBN disappeared))
+			(. .))))
+
+using lex combiantor rule
+resolved: (N (NNP Charles~de~Gaulle))
+ schema: (N 131)  cur: (N (NNP Charles~de~Gaulle))  incomplete:
+
+using unary combiantor rule
+(N (NNP Charles~de~Gaulle))
+ schema: (N 131)  cur: (N (NNP Charles~de~Gaulle))  incomplete:
+Unary schema:
+ schema: (NP {132})  cur: (NP {132})  incomplete: ({132}, self)
+resolved: (NP (NNP Charles~de~Gaulle))
+ schema: (NP {132})  cur: (NP (NNP Charles~de~Gaulle))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD died))
+ schema: (VP 133)  cur: (VP (VBD died))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 134 135)  cur: (PP (IN in) 135)  incomplete: (135, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (CD 1970))
+ schema: (N 136)  cur: (N (CD 1970))  incomplete:
+
+using unary combiantor rule
+(N (CD 1970))
+ schema: (N 136)  cur: (N (CD 1970))  incomplete:
+Unary schema:
+ schema: (NP {137})  cur: (NP {137})  incomplete: ({137}, self)
+resolved: (NP (CD 1970))
+ schema: (NP {137})  cur: (NP (CD 1970))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 138)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (CD 1970))
+ schema: (NP {137})  cur: (NP (CD 1970))  incomplete:
+(. .)
+ schema: {(. 138)}  cur: {(. (. .))}  incomplete:
+1970 .
+resolved: (NP (CD 1970) (. .))
+ schema: (NP {137})  cur: (NP (CD 1970) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 134 135)  cur: (PP (IN in) 135)  incomplete: (135, self)
+(VP {1} 0)
+(S 1 0)
+(NP (CD 1970) (. .))
+ schema: (NP {137})  cur: (NP (CD 1970) (. .))  incomplete:
+resolved: (PP (IN in) (NP (CD 1970) (. .)))
+ schema: (PP 134 135)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBD died))
+ schema: (VP 133)  cur: (VP (VBD died))  incomplete:
+(S 1 0)
+(PP (IN in) (NP (CD 1970) (. .)))
+ schema: (PP 134 135)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBD died) (PP (IN in) (NP (CD 1970) (. .))))
+ schema: (VP {139} 140)  cur: (VP (VBD died) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Charles~de~Gaulle))
+ schema: (NP {132})  cur: (NP (NNP Charles~de~Gaulle))  incomplete:
+(VP (VBD died) (PP (IN in) (NP (CD 1970) (. .))))
+ schema: (VP {139} 140)  cur: (VP (VBD died) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Charles~de~Gaulle)) (VP (VBD died) (PP (IN in) (NP (CD 1970) (. .)))))
+ schema: (S 141 142)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Charles~de~Gaulle))
+		(VP
+			(VBD died)
+			(PP
+				(IN in)
+				(NP
+					(CD 1970)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Charles~de~Gaulle))
+		(VP
+			(VBD died)
+			(PP
+				(IN in)
+				(NP
+					(CD 1970)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (N (NNP British~Columbia))
+ schema: (N 143)  cur: (N (NNP British~Columbia))  incomplete:
+
+using unary combiantor rule
+(N (NNP British~Columbia))
+ schema: (N 143)  cur: (N (NNP British~Columbia))  incomplete:
+Unary schema:
+ schema: (NP {144})  cur: (NP {144})  incomplete: ({144}, self)
+resolved: (NP (NNP British~Columbia))
+ schema: (NP {144})  cur: (NP (NNP British~Columbia))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ is))
+ schema: (VP 145 146)  cur: (VP (VBZ is) 146)  incomplete: (146, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBN located))
+ schema: (VP 147)  cur: (VP (VBN located))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ is))
+ schema: (VP 145 146)  cur: (VP (VBZ is) 146)  incomplete: (146, self)
+(S 1 0)
+(VP (VBN located))
+ schema: (VP 147)  cur: (VP (VBN located))  incomplete:
+(S 1 0)
+resolved: (VP (VBZ is) (VP (VBN located)))
+ schema: (VP 145 146)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 148 149)  cur: (PP (IN in) 149)  incomplete: (149, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNP Canada))
+ schema: (N 150)  cur: (N (NNP Canada))  incomplete:
+
+using unary combiantor rule
+(N (NNP Canada))
+ schema: (N 150)  cur: (N (NNP Canada))  incomplete:
+Unary schema:
+ schema: (NP {151})  cur: (NP {151})  incomplete: ({151}, self)
+resolved: (NP (NNP Canada))
+ schema: (NP {151})  cur: (NP (NNP Canada))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 148 149)  cur: (PP (IN in) 149)  incomplete: (149, self)
+(VP {1} 0)
+(S 1 0)
+(NP (NNP Canada))
+ schema: (NP {151})  cur: (NP (NNP Canada))  incomplete:
+resolved: (PP (IN in) (NP (NNP Canada)))
+ schema: (PP 148 149)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBZ is) (VP (VBN located)))
+ schema: (VP 145 146)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+(PP (IN in) (NP (NNP Canada)))
+ schema: (PP 148 149)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (NNP Canada))))
+ schema: (VP {152} 153)  cur: (VP (VBZ is) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP British~Columbia))
+ schema: (NP {144})  cur: (NP (NNP British~Columbia))  incomplete:
+(VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (NNP Canada))))
+ schema: (VP {152} 153)  cur: (VP (VBZ is) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP British~Columbia)) (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (NNP Canada)))))
+ schema: (S 154 155)  cur: (S obj obj)  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 156)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(S (NP (NNP British~Columbia)) (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (NNP Canada)))))
+ schema: (S 154 155)  cur: (S obj obj)  incomplete:
+(. .)
+ schema: {(. 156)}  cur: {(. (. .))}  incomplete:
+British~Columbia .
+resolved: (S (NP (NNP British~Columbia)) (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (NNP Canada)))) (. .))
+ schema: (S 154 155)  cur: (S obj obj (. .))  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP British~Columbia))
+		(VP
+			(VBZ is)
+			(VP
+				(VBN located))
+			(PP
+				(IN in)
+				(NP
+					(NNP Canada))))
+		(. .)))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP British~Columbia))
+		(VP
+			(VBZ is)
+			(VP
+				(VBN located))
+			(PP
+				(IN in)
+				(NP
+					(NNP Canada))))
+		(. .)))
+
+using lex combiantor rule
+resolved: (N (NNP Pretoria))
+ schema: (N 157)  cur: (N (NNP Pretoria))  incomplete:
+
+using unary combiantor rule
+(N (NNP Pretoria))
+ schema: (N 157)  cur: (N (NNP Pretoria))  incomplete:
+Unary schema:
+ schema: (NP {158})  cur: (NP {158})  incomplete: ({158}, self)
+resolved: (NP (NNP Pretoria))
+ schema: (NP {158})  cur: (NP (NNP Pretoria))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ is))
+ schema: (VP 159 160)  cur: (VP (VBZ is) 160)  incomplete: (160, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBN located))
+ schema: (VP 161)  cur: (VP (VBN located))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 162 163)  cur: (PP (IN in) 163)  incomplete: (163, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNP Côte~d\Ivoire))
+ schema: (N 164)  cur: (N (NNP Côte~d\Ivoire))  incomplete:
+
+using unary combiantor rule
+(N (NNP Côte~d\Ivoire))
+ schema: (N 164)  cur: (N (NNP Côte~d\Ivoire))  incomplete:
+Unary schema:
+ schema: (NP {165})  cur: (NP {165})  incomplete: ({165}, self)
+resolved: (NP (NNP Côte~d\Ivoire))
+ schema: (NP {165})  cur: (NP (NNP Côte~d\Ivoire))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 166)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NNP Côte~d\Ivoire))
+ schema: (NP {165})  cur: (NP (NNP Côte~d\Ivoire))  incomplete:
+(. .)
+ schema: {(. 166)}  cur: {(. (. .))}  incomplete:
+Côte~d\Ivoire .
+resolved: (NP (NNP Côte~d\Ivoire) (. .))
+ schema: (NP {165})  cur: (NP (NNP Côte~d\Ivoire) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 162 163)  cur: (PP (IN in) 163)  incomplete: (163, self)
+(VP {1} 0)
+(S 1 0)
+(NP (NNP Côte~d\Ivoire) (. .))
+ schema: (NP {165})  cur: (NP (NNP Côte~d\Ivoire) (. .))  incomplete:
+resolved: (PP (IN in) (NP (NNP Côte~d\Ivoire) (. .)))
+ schema: (PP 162 163)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBN located))
+ schema: (VP 161)  cur: (VP (VBN located))  incomplete:
+(S 1 0)
+(PP (IN in) (NP (NNP Côte~d\Ivoire) (. .)))
+ schema: (PP 162 163)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBN located) (PP (IN in) (NP (NNP Côte~d\Ivoire) (. .))))
+ schema: (VP {167} 168)  cur: (VP (VBN located) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ is))
+ schema: (VP 159 160)  cur: (VP (VBZ is) 160)  incomplete: (160, self)
+(S 1 0)
+(VP (VBN located) (PP (IN in) (NP (NNP Côte~d\Ivoire) (. .))))
+ schema: (VP {167} 168)  cur: (VP (VBN located) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBZ is) (VP (VBN located) (PP (IN in) (NP (NNP Côte~d\Ivoire) (. .)))))
+ schema: (VP 159 160)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Pretoria))
+ schema: (NP {158})  cur: (NP (NNP Pretoria))  incomplete:
+(VP (VBZ is) (VP (VBN located) (PP (IN in) (NP (NNP Côte~d\Ivoire) (. .)))))
+ schema: (VP 159 160)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Pretoria)) (VP (VBZ is) (VP (VBN located) (PP (IN in) (NP (NNP Côte~d\Ivoire) (. .))))))
+ schema: (S 169 170)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Pretoria))
+		(VP
+			(VBZ is)
+			(VP
+				(VBN located)
+				(PP
+					(IN in)
+					(NP
+						(NNP Côte~d\Ivoire)
+						(. .)))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Pretoria))
+		(VP
+			(VBZ is)
+			(VP
+				(VBN located)
+				(PP
+					(IN in)
+					(NP
+						(NNP Côte~d\Ivoire)
+						(. .)))))))
+
+using lex combiantor rule
+resolved: (N (NNP Alfred~Nobel))
+ schema: (N 171)  cur: (N (NNP Alfred~Nobel))  incomplete:
+
+using unary combiantor rule
+(N (NNP Alfred~Nobel))
+ schema: (N 171)  cur: (N (NNP Alfred~Nobel))  incomplete:
+Unary schema:
+ schema: (NP {172})  cur: (NP {172})  incomplete: ({172}, self)
+resolved: (NP (NNP Alfred~Nobel))
+ schema: (NP {172})  cur: (NP (NNP Alfred~Nobel))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD invented))
+ schema: (VP 173 174)  cur: (VP (VBD invented) 174)  incomplete: (174, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NN dynamite))
+ schema: (N 175)  cur: (N (NN dynamite))  incomplete:
+
+using unary combiantor rule
+(N (NN dynamite))
+ schema: (N 175)  cur: (N (NN dynamite))  incomplete:
+Unary schema:
+ schema: (NP {176})  cur: (NP {176})  incomplete: ({176}, self)
+resolved: (NP (NN dynamite))
+ schema: (NP {176})  cur: (NP (NN dynamite))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBD invented))
+ schema: (VP 173 174)  cur: (VP (VBD invented) 174)  incomplete: (174, self)
+(S 1 0)
+(NP (NN dynamite))
+ schema: (NP {176})  cur: (NP (NN dynamite))  incomplete:
+resolved: (VP (VBD invented) (NP (NN dynamite)))
+ schema: (VP 173 174)  cur: (VP (VBD invented) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 177 178)  cur: (PP (IN in) 178)  incomplete: (178, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (CD 1866))
+ schema: (N 179)  cur: (N (CD 1866))  incomplete:
+
+using unary combiantor rule
+(N (CD 1866))
+ schema: (N 179)  cur: (N (CD 1866))  incomplete:
+Unary schema:
+ schema: (NP {180})  cur: (NP {180})  incomplete: ({180}, self)
+resolved: (NP (CD 1866))
+ schema: (NP {180})  cur: (NP (CD 1866))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 181)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (CD 1866))
+ schema: (NP {180})  cur: (NP (CD 1866))  incomplete:
+(. .)
+ schema: {(. 181)}  cur: {(. (. .))}  incomplete:
+1866 .
+resolved: (NP (CD 1866) (. .))
+ schema: (NP {180})  cur: (NP (CD 1866) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 177 178)  cur: (PP (IN in) 178)  incomplete: (178, self)
+(VP {1} 0)
+(S 1 0)
+(NP (CD 1866) (. .))
+ schema: (NP {180})  cur: (NP (CD 1866) (. .))  incomplete:
+resolved: (PP (IN in) (NP (CD 1866) (. .)))
+ schema: (PP 177 178)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBD invented) (NP (NN dynamite)))
+ schema: (VP 173 174)  cur: (VP (VBD invented) obj)  incomplete:
+(S 1 0)
+(PP (IN in) (NP (CD 1866) (. .)))
+ schema: (PP 177 178)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBD invented) (NP (NN dynamite)) (PP (IN in) (NP (CD 1866) (. .))))
+ schema: (VP {182} 183)  cur: (VP (VBD invented) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Alfred~Nobel))
+ schema: (NP {172})  cur: (NP (NNP Alfred~Nobel))  incomplete:
+(VP (VBD invented) (NP (NN dynamite)) (PP (IN in) (NP (CD 1866) (. .))))
+ schema: (VP {182} 183)  cur: (VP (VBD invented) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Alfred~Nobel)) (VP (VBD invented) (NP (NN dynamite)) (PP (IN in) (NP (CD 1866) (. .)))))
+ schema: (S 184 185)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Alfred~Nobel))
+		(VP
+			(VBD invented)
+			(NP
+				(NN dynamite))
+			(PP
+				(IN in)
+				(NP
+					(CD 1866)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Alfred~Nobel))
+		(VP
+			(VBD invented)
+			(NP
+				(NN dynamite))
+			(PP
+				(IN in)
+				(NP
+					(CD 1866)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (EX There))
+ schema: (NP 186)  cur: (NP (EX There))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBP are))
+ schema: (VP 187 188)  cur: (VP (VBP are) 188)  incomplete: (188, self)
+(S 1 0)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NNS millions))
+ schema: (NP 189 190)  cur: (NP (NNS millions) 190)  incomplete: (190, self)
+(N 0)
+
+using lex combiantor rule
+Unannotated category: PP/N
+resolved: (NP (IN of))
+ schema: (NP 191 192)  cur: (NP (IN of) 192)  incomplete: (192, self)
+(PP 0)
+
+using lex combiantor rule
+resolved: (N (NNS stars))
+ schema: (N 193)  cur: (N (NNS stars))  incomplete:
+
+using fa.f combiantor rule
+(NP (IN of))
+ schema: (NP 191 192)  cur: (NP (IN of) 192)  incomplete: (192, self)
+(PP 0)
+(N (NNS stars))
+ schema: (N 193)  cur: (N (NNS stars))  incomplete:
+resolved: (NP (IN of) (N (NNS stars)))
+ schema: (NP 191 192)  cur: (NP (IN of) obj)  incomplete:
+(PP 0)
+
+using fa.f combiantor rule
+(NP (NNS millions))
+ schema: (NP 189 190)  cur: (NP (NNS millions) 190)  incomplete: (190, self)
+(N 0)
+(NP (IN of) (N (NNS stars)))
+ schema: (NP 191 192)  cur: (NP (IN of) obj)  incomplete:
+(PP 0)
+resolved: (NP (NNS millions) (NP (IN of) (N (NNS stars))))
+ schema: (NP 189 190)  cur: (NP (NNS millions) obj)  incomplete:
+(N 0)
+
+using unary combiantor rule
+(NP (NNS millions) (NP (IN of) (N (NNS stars))))
+ schema: (NP 189 190)  cur: (NP (NNS millions) obj)  incomplete:
+(N 0)
+Unary schema:
+ schema: (NP {194})  cur: (NP {194})  incomplete: ({194}, self)
+resolved: (NP (NNS millions) (NP (IN of) (N (NNS stars))))
+ schema: (NP {194})  cur: (NP (NNS millions) obj)  incomplete:
+
+using fa.f combiantor rule
+(VP (VBP are))
+ schema: (VP 187 188)  cur: (VP (VBP are) 188)  incomplete: (188, self)
+(S 1 0)
+(NP (NNS millions) (NP (IN of) (N (NNS stars))))
+ schema: (NP {194})  cur: (NP (NNS millions) obj)  incomplete:
+resolved: (VP (VBP are) (NP (NNS millions) (NP (IN of) (N (NNS stars)))))
+ schema: (VP 187 188)  cur: (VP (VBP are) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 195 196)  cur: (PP (IN in) 196)  incomplete: (196, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (DT the))
+ schema: (NP 197 {198})  cur: (NP (DT the) {198})  incomplete: ({198}, self)
+
+using lex combiantor rule
+resolved: (N (NN universe))
+ schema: (N 199)  cur: (N (NN universe))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT the))
+ schema: (NP 197 {198})  cur: (NP (DT the) {198})  incomplete: ({198}, self)
+(N (NN universe))
+ schema: (N 199)  cur: (N (NN universe))  incomplete:
+resolved: (NP (DT the) (NN universe))
+ schema: (NP 197 {198})  cur: (NP (DT the) (NN universe))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 200)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (DT the) (NN universe))
+ schema: (NP 197 {198})  cur: (NP (DT the) (NN universe))  incomplete:
+(. .)
+ schema: {(. 200)}  cur: {(. (. .))}  incomplete:
+the .
+resolved: (NP (DT the) (NN universe) (. .))
+ schema: (NP 197 {198})  cur: (NP (DT the) (NN universe) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 195 196)  cur: (PP (IN in) 196)  incomplete: (196, self)
+(VP {1} 0)
+(S 1 0)
+(NP (DT the) (NN universe) (. .))
+ schema: (NP 197 {198})  cur: (NP (DT the) (NN universe) (. .))  incomplete:
+resolved: (PP (IN in) (NP (DT the) (NN universe) (. .)))
+ schema: (PP 195 196)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBP are) (NP (NNS millions) (NP (IN of) (N (NNS stars)))))
+ schema: (VP 187 188)  cur: (VP (VBP are) obj)  incomplete:
+(S 1 0)
+(PP (IN in) (NP (DT the) (NN universe) (. .)))
+ schema: (PP 195 196)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBP are) (NP (NNS millions) (NP (IN of) (N (NNS stars)))) (PP (IN in) (NP (DT the) (NN universe) (. .))))
+ schema: (VP {201} 202)  cur: (VP (VBP are) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (EX There))
+ schema: (NP 186)  cur: (NP (EX There))  incomplete:
+(VP (VBP are) (NP (NNS millions) (NP (IN of) (N (NNS stars)))) (PP (IN in) (NP (DT the) (NN universe) (. .))))
+ schema: (VP {201} 202)  cur: (VP (VBP are) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (EX There)) (VP (VBP are) (NP (NNS millions) (NP (IN of) (N (NNS stars)))) (PP (IN in) (NP (DT the) (NN universe) (. .)))))
+ schema: (S 203 204)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(EX There))
+		(VP
+			(VBP are)
+			(NP
+				(NNS millions)
+				(NP
+					(IN of)
+					(N
+						(NNS stars))))
+			(PP
+				(IN in)
+				(NP
+					(DT the)
+					(NN universe)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(EX There))
+		(VP
+			(VBP are)
+			(NP
+				(NNS millions)
+				(NP
+					(IN of)
+					(NNS stars)))
+			(PP
+				(IN in)
+				(NP
+					(DT the)
+					(NN universe)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP I))
+ schema: (NP 205)  cur: (NP (PRP I))  incomplete:
+
+using lex combiantor rule
+resolved: (VBP am)
+ schema: {(TEMP 206)}  cur: {(TEMP (VBP am))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (ADJP (VBN ashamed))
+ schema: (ADJP 207 208)  cur: (ADJP (VBN ashamed) 208)  incomplete: (208, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN of))
+ schema: (PP 209 210)  cur: (PP (IN of) 210)  incomplete: (210, self)
+
+using lex combiantor rule
+resolved: (NP (PRP myself))
+ schema: (NP 211)  cur: (NP (PRP myself))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN of))
+ schema: (PP 209 210)  cur: (PP (IN of) 210)  incomplete: (210, self)
+(NP (PRP myself))
+ schema: (NP 211)  cur: (NP (PRP myself))  incomplete:
+resolved: (PP (IN of) (NP (PRP myself)))
+ schema: (PP 209 210)  cur: (PP (IN of) obj)  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 212)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(PP (IN of) (NP (PRP myself)))
+ schema: (PP 209 210)  cur: (PP (IN of) obj)  incomplete:
+(. .)
+ schema: {(. 212)}  cur: {(. (. .))}  incomplete:
+of .
+resolved: (PP (IN of) (NP (PRP myself)) (. .))
+ schema: (PP 209 210)  cur: (PP (IN of) obj (. .))  incomplete:
+
+using fa.f combiantor rule
+(ADJP (VBN ashamed))
+ schema: (ADJP 207 208)  cur: (ADJP (VBN ashamed) 208)  incomplete: (208, self)
+(S 1 0)
+(PP (IN of) (NP (PRP myself)) (. .))
+ schema: (PP 209 210)  cur: (PP (IN of) obj (. .))  incomplete:
+resolved: (ADJP (VBN ashamed) (PP (IN of) (NP (PRP myself)) (. .)))
+ schema: (ADJP 207 208)  cur: (ADJP (VBN ashamed) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VBP am)
+ schema: {(TEMP 206)}  cur: {(TEMP (VBP am))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+(ADJP (VBN ashamed) (PP (IN of) (NP (PRP myself)) (. .)))
+ schema: (ADJP 207 208)  cur: (ADJP (VBN ashamed) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBP am) (ADJP (ADJP (VBN ashamed) (PP (IN of) (NP (PRP myself)) (. .)))))
+ schema: (VP 213 (ADJP 214))  cur: (VP (VBP am) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP I))
+ schema: (NP 205)  cur: (NP (PRP I))  incomplete:
+(VP (VBP am) (ADJP (ADJP (VBN ashamed) (PP (IN of) (NP (PRP myself)) (. .)))))
+ schema: (VP 213 (ADJP 214))  cur: (VP (VBP am) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP I)) (VP (VBP am) (ADJP (ADJP (VBN ashamed) (PP (IN of) (NP (PRP myself)) (. .))))))
+ schema: (S 215 216)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBP am)
+			(ADJP
+				(ADJP
+					(VBN ashamed)
+					(PP
+						(IN of)
+						(NP
+							(PRP myself))
+						(. .)))))))
+duplicate!
+(ADJP (ADJP (VBN ashamed) (PP (IN of) (NP (PRP myself)) (. .))))
+(ADJP (VBN ashamed) (PP (IN of) (NP (PRP myself)) (. .)))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBP am)
+			(ADJP
+				(VBN ashamed)
+				(PP
+					(IN of)
+					(NP
+						(PRP myself))
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP You))
+ schema: (NP 217)  cur: (NP (PRP You))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (MD must))
+ schema: (VP 218 219)  cur: (VP (MD must) 219)  incomplete: (219, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (RB n\t) )
+ schema: (VP 220 (S 221))  cur: (VP (RB n\t) obj)  incomplete: (221, other)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VB use))
+ schema: (VP 222 223)  cur: (VP (VB use) 223)  incomplete: (223, self)
+(S 1 0)
+
+using lex combiantor rule
+Missing category: NP/(N/PP) asked for by lex
+resolved: (NP (PRP$ my))
+ schema: (NP 224 225)  cur: (NP (PRP$ my) 225)  incomplete: (225, self)
+(NP 0)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN pen))
+ schema: (NP 226 227)  cur: (NP (NN pen) 227)  incomplete: (227, self)
+(N 0)
+
+using fa.f combiantor rule
+(NP (PRP$ my))
+ schema: (NP 224 225)  cur: (NP (PRP$ my) 225)  incomplete: (225, self)
+(NP 0)
+(NP (NN pen))
+ schema: (NP 226 227)  cur: (NP (NN pen) 227)  incomplete: (227, self)
+(N 0)
+resolved: (NP (PRP$ my) (NP (NN pen)))
+ schema: (NP 224 225)  cur: (NP (PRP$ my) obj)  incomplete:
+(NP 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 228)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (PRP$ my) (NP (NN pen)))
+ schema: (NP 224 225)  cur: (NP (PRP$ my) obj)  incomplete:
+(NP 0)
+(. .)
+ schema: {(. 228)}  cur: {(. (. .))}  incomplete:
+my .
+resolved: (NP (PRP$ my) (NP (NN pen)) (. .))
+ schema: (NP 224 225)  cur: (NP (PRP$ my) obj (. .))  incomplete:
+(NP 0)
+
+using fa.f combiantor rule
+(VP (VB use))
+ schema: (VP 222 223)  cur: (VP (VB use) 223)  incomplete: (223, self)
+(S 1 0)
+(NP (PRP$ my) (NP (NN pen)) (. .))
+ schema: (NP 224 225)  cur: (NP (PRP$ my) obj (. .))  incomplete:
+(NP 0)
+resolved: (VP (VB use) (NP (PRP$ my) (NP (NN pen)) (. .)))
+ schema: (VP 222 223)  cur: (VP (VB use) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (RB n\t) )
+ schema: (VP 220 (S 221))  cur: (VP (RB n\t) obj)  incomplete: (221, other)
+(S 1 0)
+(VP (VB use) (NP (PRP$ my) (NP (NN pen)) (. .)))
+ schema: (VP 222 223)  cur: (VP (VB use) obj)  incomplete:
+(S 1 0)
+resolved: (VP (RB n\t) (S (VP (VB use) (NP (PRP$ my) (NP (NN pen)) (. .)))))
+ schema: (VP 220 (S 221))  cur: (VP (RB n\t) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (MD must))
+ schema: (VP 218 219)  cur: (VP (MD must) 219)  incomplete: (219, self)
+(S 1 0)
+(VP (RB n\t) (S (VP (VB use) (NP (PRP$ my) (NP (NN pen)) (. .)))))
+ schema: (VP 220 (S 221))  cur: (VP (RB n\t) obj)  incomplete:
+(S 1 0)
+resolved: (VP (MD must) (VP (RB n\t) (S (VP (VB use) (NP (PRP$ my) (NP (NN pen)) (. .))))))
+ schema: (VP 218 219)  cur: (VP (MD must) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP You))
+ schema: (NP 217)  cur: (NP (PRP You))  incomplete:
+(VP (MD must) (VP (RB n\t) (S (VP (VB use) (NP (PRP$ my) (NP (NN pen)) (. .))))))
+ schema: (VP 218 219)  cur: (VP (MD must) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP You)) (VP (MD must) (VP (RB n\t) (S (VP (VB use) (NP (PRP$ my) (NP (NN pen)) (. .)))))))
+ schema: (S 229 230)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP You))
+		(VP
+			(MD must)
+			(VP
+				(RB n\t)
+				(S
+					(VP
+						(VB use)
+						(NP
+							(PRP$ my)
+							(NP
+								(NN pen))
+							(. .))))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP You))
+		(VP
+			(MD must)
+			(VP
+				(RB n\t)
+				(S
+					(VP
+						(VB use)
+						(NP
+							(PRP$ my)
+							(NP
+								(NN pen))
+							(. .))))))))
+
+using lex combiantor rule
+resolved: (NP (DT The))
+ schema: (NP 231 {232})  cur: (NP (DT The) {232})  incomplete: ({232}, self)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN roof))
+ schema: (NP 233 234)  cur: (NP (NN roof) 234)  incomplete: (234, self)
+(N 0)
+
+using lex combiantor rule
+resolved: (PP (IN of))
+ schema: (PP 235 236)  cur: (PP (IN of) 236)  incomplete: (236, self)
+
+using lex combiantor rule
+Missing category: NP/(N/PP) asked for by lex
+resolved: (NP (PRP$ my))
+ schema: (NP 237 238)  cur: (NP (PRP$ my) 238)  incomplete: (238, self)
+(NP 0)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN house))
+ schema: (NP 239 240)  cur: (NP (NN house) 240)  incomplete: (240, self)
+(N 0)
+
+using fa.f combiantor rule
+(NP (PRP$ my))
+ schema: (NP 237 238)  cur: (NP (PRP$ my) 238)  incomplete: (238, self)
+(NP 0)
+(NP (NN house))
+ schema: (NP 239 240)  cur: (NP (NN house) 240)  incomplete: (240, self)
+(N 0)
+resolved: (NP (PRP$ my) (NP (NN house)))
+ schema: (NP 237 238)  cur: (NP (PRP$ my) obj)  incomplete:
+(NP 0)
+
+using fa.f combiantor rule
+(PP (IN of))
+ schema: (PP 235 236)  cur: (PP (IN of) 236)  incomplete: (236, self)
+(NP (PRP$ my) (NP (NN house)))
+ schema: (NP 237 238)  cur: (NP (PRP$ my) obj)  incomplete:
+(NP 0)
+resolved: (PP (IN of) (NP (PRP$ my) (NP (NN house))))
+ schema: (PP 235 236)  cur: (PP (IN of) obj)  incomplete:
+
+using fa.f combiantor rule
+(NP (NN roof))
+ schema: (NP 233 234)  cur: (NP (NN roof) 234)  incomplete: (234, self)
+(N 0)
+(PP (IN of) (NP (PRP$ my) (NP (NN house))))
+ schema: (PP 235 236)  cur: (PP (IN of) obj)  incomplete:
+resolved: (NP (NN roof) (PP (IN of) (NP (PRP$ my) (NP (NN house)))))
+ schema: (NP 233 234)  cur: (NP (NN roof) obj)  incomplete:
+(N 0)
+
+using fa.f combiantor rule
+(NP (DT The))
+ schema: (NP 231 {232})  cur: (NP (DT The) {232})  incomplete: ({232}, self)
+(NP (NN roof) (PP (IN of) (NP (PRP$ my) (NP (NN house)))))
+ schema: (NP 233 234)  cur: (NP (NN roof) obj)  incomplete:
+(N 0)
+resolved: (NP (DT The) (NN roof) (PP (IN of) (NP (PRP$ my) (NP (NN house)))))
+ schema: (NP 231 {232})  cur: (NP (DT The) (NN roof) obj)  incomplete:
+
+using lex combiantor rule
+resolved: (VBZ is)
+ schema: {(TEMP 241)}  cur: {(TEMP (VBZ is))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (JJ red)
+ schema: {(TEMP 242)}  cur: {(TEMP (JJ red))}  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 243)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(JJ red)
+ schema: {(TEMP 242)}  cur: {(TEMP (JJ red))}  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 243)}  cur: {(. (. .))}  incomplete:
+red .
+resolved: (JJ red) (. .)
+ schema: {(TEMP 242)}  cur: {(TEMP (JJ red) (. .))}  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VBZ is)
+ schema: {(TEMP 241)}  cur: {(TEMP (VBZ is))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+(JJ red) (. .)
+ schema: {(TEMP 242)}  cur: {(TEMP (JJ red) (. .))}  incomplete:
+(S 1 0)
+resolved: (VP (VBZ is) (ADJP (JJ red) (. .)))
+ schema: (VP 244 (ADJP 245))  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (DT The) (NN roof) (PP (IN of) (NP (PRP$ my) (NP (NN house)))))
+ schema: (NP 231 {232})  cur: (NP (DT The) (NN roof) obj)  incomplete:
+(VP (VBZ is) (ADJP (JJ red) (. .)))
+ schema: (VP 244 (ADJP 245))  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (DT The) (NN roof) (PP (IN of) (NP (PRP$ my) (NP (NN house))))) (VP (VBZ is) (ADJP (JJ red) (. .))))
+ schema: (S 246 247)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(DT The)
+			(NN roof)
+			(PP
+				(IN of)
+				(NP
+					(PRP$ my)
+					(NP
+						(NN house)))))
+		(VP
+			(VBZ is)
+			(ADJP
+				(JJ red)
+				(. .)))))
+cleaned: (ROOT
+	(S
+		(NP
+			(DT The)
+			(NN roof)
+			(PP
+				(IN of)
+				(NP
+					(PRP$ my)
+					(NP
+						(NN house)))))
+		(VP
+			(VBZ is)
+			(ADJP
+				(JJ red)
+				(. .)))))
+
+using lex combiantor rule
+resolved: (NP (PRP I))
+ schema: (NP 248)  cur: (NP (PRP I))  incomplete:
+
+using lex combiantor rule
+resolved: (VBD got)
+ schema: {(NP 249 250)}  cur: {(NP (VBD got) 250)}  incomplete: (250, self)
+(VP >0 (S >0 2))
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (PRP$ my))
+ schema: (NP 251 {252})  cur: (NP (PRP$ my) {252})  incomplete: ({252}, self)
+
+using lex combiantor rule
+resolved: (N (NN bicycle))
+ schema: (N 253)  cur: (N (NN bicycle))  incomplete:
+
+using fa.f combiantor rule
+(NP (PRP$ my))
+ schema: (NP 251 {252})  cur: (NP (PRP$ my) {252})  incomplete: ({252}, self)
+(N (NN bicycle))
+ schema: (N 253)  cur: (N (NN bicycle))  incomplete:
+resolved: (NP (PRP$ my) (NN bicycle))
+ schema: (NP 251 {252})  cur: (NP (PRP$ my) (NN bicycle))  incomplete:
+
+using fa.f combiantor rule
+(VBD got)
+ schema: {(NP 249 250)}  cur: {(NP (VBD got) 250)}  incomplete: (250, self)
+(VP >0 (S >0 2))
+(S 1 0)
+(NP (PRP$ my) (NN bicycle))
+ schema: (NP 251 {252})  cur: (NP (PRP$ my) (NN bicycle))  incomplete:
+resolved: (VBD got) (NP (PRP$ my) (NN bicycle))
+ schema: {(NP 249 250)}  cur: {(NP (VBD got) obj)}  incomplete:
+(VP >0 (S >0 2))
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBD repaired))
+ schema: (VP 254)  cur: (VP (VBD repaired))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 255)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (VBD repaired))
+ schema: (VP 254)  cur: (VP (VBD repaired))  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 255)}  cur: {(. (. .))}  incomplete:
+repaired .
+resolved: (VP (VBD repaired) (. .))
+ schema: (VP 254)  cur: (VP (VBD repaired) (. .))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VBD got) (NP (PRP$ my) (NN bicycle))
+ schema: {(NP 249 250)}  cur: {(NP (VBD got) obj)}  incomplete:
+(VP >0 (S >0 2))
+(S 1 0)
+(VP (VBD repaired) (. .))
+ schema: (VP 254)  cur: (VP (VBD repaired) (. .))  incomplete:
+(S 1 0)
+resolved: (VP (VBD got) (S (NP (PRP$ my) (NN bicycle)) (VP (VBD repaired) (. .))))
+ schema: (VP >256 (S >256 257))  cur: (VP (VBD got) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP I))
+ schema: (NP 248)  cur: (NP (PRP I))  incomplete:
+(VP (VBD got) (S (NP (PRP$ my) (NN bicycle)) (VP (VBD repaired) (. .))))
+ schema: (VP >256 (S >256 257))  cur: (VP (VBD got) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP I)) (VP (VBD got) (S (NP (PRP$ my) (NN bicycle)) (VP (VBD repaired) (. .)))))
+ schema: (S 258 259)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBD got)
+			(S
+				(NP
+					(PRP$ my)
+					(NN bicycle))
+				(VP
+					(VBD repaired)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBD got)
+			(S
+				(NP
+					(PRP$ my)
+					(NN bicycle))
+				(VP
+					(VBD repaired)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP I))
+ schema: (NP 260)  cur: (NP (PRP I))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD showered))
+ schema: (VP 261)  cur: (VP (VBD showered))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN before))
+ schema: (PP 262 263)  cur: (PP (IN before) 263)  incomplete: (263, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NN breakfast))
+ schema: (N 264)  cur: (N (NN breakfast))  incomplete:
+
+using unary combiantor rule
+(N (NN breakfast))
+ schema: (N 264)  cur: (N (NN breakfast))  incomplete:
+Unary schema:
+ schema: (NP {265})  cur: (NP {265})  incomplete: ({265}, self)
+resolved: (NP (NN breakfast))
+ schema: (NP {265})  cur: (NP (NN breakfast))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 266)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NN breakfast))
+ schema: (NP {265})  cur: (NP (NN breakfast))  incomplete:
+(. .)
+ schema: {(. 266)}  cur: {(. (. .))}  incomplete:
+breakfast .
+resolved: (NP (NN breakfast) (. .))
+ schema: (NP {265})  cur: (NP (NN breakfast) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN before))
+ schema: (PP 262 263)  cur: (PP (IN before) 263)  incomplete: (263, self)
+(VP {1} 0)
+(S 1 0)
+(NP (NN breakfast) (. .))
+ schema: (NP {265})  cur: (NP (NN breakfast) (. .))  incomplete:
+resolved: (PP (IN before) (NP (NN breakfast) (. .)))
+ schema: (PP 262 263)  cur: (PP (IN before) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBD showered))
+ schema: (VP 261)  cur: (VP (VBD showered))  incomplete:
+(S 1 0)
+(PP (IN before) (NP (NN breakfast) (. .)))
+ schema: (PP 262 263)  cur: (PP (IN before) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBD showered) (PP (IN before) (NP (NN breakfast) (. .))))
+ schema: (VP {267} 268)  cur: (VP (VBD showered) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP I))
+ schema: (NP 260)  cur: (NP (PRP I))  incomplete:
+(VP (VBD showered) (PP (IN before) (NP (NN breakfast) (. .))))
+ schema: (VP {267} 268)  cur: (VP (VBD showered) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP I)) (VP (VBD showered) (PP (IN before) (NP (NN breakfast) (. .)))))
+ schema: (S 269 270)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBD showered)
+			(PP
+				(IN before)
+				(NP
+					(NN breakfast)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBD showered)
+			(PP
+				(IN before)
+				(NP
+					(NN breakfast)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP I))
+ schema: (NP 271)  cur: (NP (PRP I))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBP know))
+ schema: (VP 272 273)  cur: (VP (VBP know) 273)  incomplete: (273, self)
+(S 1 0)
+
+using lex combiantor rule
+Unannotated category: NP/PP
+resolved: (NP (NN none))
+ schema: (NP 274 275)  cur: (NP (NN none) 275)  incomplete: (275, self)
+(NP 0)
+
+using lex combiantor rule
+resolved: (PP (IN of))
+ schema: (PP 276 277)  cur: (PP (IN of) 277)  incomplete: (277, self)
+
+using lex combiantor rule
+resolved: (NP (PRP them))
+ schema: (NP 278)  cur: (NP (PRP them))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 279)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (PRP them))
+ schema: (NP 278)  cur: (NP (PRP them))  incomplete:
+(. .)
+ schema: {(. 279)}  cur: {(. (. .))}  incomplete:
+them .
+resolved: (NP (PRP them) (. .))
+ schema: (NP 278)  cur: (NP (PRP them) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN of))
+ schema: (PP 276 277)  cur: (PP (IN of) 277)  incomplete: (277, self)
+(NP (PRP them) (. .))
+ schema: (NP 278)  cur: (NP (PRP them) (. .))  incomplete:
+resolved: (PP (IN of) (NP (PRP them) (. .)))
+ schema: (PP 276 277)  cur: (PP (IN of) obj)  incomplete:
+
+using fa.f combiantor rule
+(NP (NN none))
+ schema: (NP 274 275)  cur: (NP (NN none) 275)  incomplete: (275, self)
+(NP 0)
+(PP (IN of) (NP (PRP them) (. .)))
+ schema: (PP 276 277)  cur: (PP (IN of) obj)  incomplete:
+resolved: (NP (NN none) (PP (IN of) (NP (PRP them) (. .))))
+ schema: (NP 274 275)  cur: (NP (NN none) obj)  incomplete:
+(NP 0)
+
+using fa.f combiantor rule
+(VP (VBP know))
+ schema: (VP 272 273)  cur: (VP (VBP know) 273)  incomplete: (273, self)
+(S 1 0)
+(NP (NN none) (PP (IN of) (NP (PRP them) (. .))))
+ schema: (NP 274 275)  cur: (NP (NN none) obj)  incomplete:
+(NP 0)
+resolved: (VP (VBP know) (NP (NN none) (PP (IN of) (NP (PRP them) (. .)))))
+ schema: (VP 272 273)  cur: (VP (VBP know) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP I))
+ schema: (NP 271)  cur: (NP (PRP I))  incomplete:
+(VP (VBP know) (NP (NN none) (PP (IN of) (NP (PRP them) (. .)))))
+ schema: (VP 272 273)  cur: (VP (VBP know) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP I)) (VP (VBP know) (NP (NN none) (PP (IN of) (NP (PRP them) (. .))))))
+ schema: (S 280 281)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBP know)
+			(NP
+				(NN none)
+				(PP
+					(IN of)
+					(NP
+						(PRP them)
+						(. .)))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBP know)
+			(NP
+				(NN none)
+				(PP
+					(IN of)
+					(NP
+						(PRP them)
+						(. .)))))))
+
+using lex combiantor rule
+resolved: (NP (PRP He))
+ schema: (NP 282)  cur: (NP (PRP He))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD paid))
+ schema: (VP 283 284)  cur: (VP (VBD paid) 284)  incomplete: (284, self)
+(VP {0} 2)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (Nslash (CD 1,000))
+ schema: (Nslash 285)  cur: (Nslash (CD 1,000))  incomplete:
+(Nnum {0} {1}) POS:CD,RB
+
+using lex combiantor rule
+resolved: (N (NN yen))
+ schema: (N 286)  cur: (N (NN yen))  incomplete:
+
+using fa.f combiantor rule
+(Nslash (CD 1,000))
+ schema: (Nslash 285)  cur: (Nslash (CD 1,000))  incomplete:
+(Nnum {0} {1}) POS:CD,RB
+(N (NN yen))
+ schema: (N 286)  cur: (N (NN yen))  incomplete:
+resolved: (Nnum (CD 1,000) (NN yen))
+ schema: (Nnum {287} {288})  cur: (Nnum (CD 1,000) (NN yen))  incomplete:
+
+using unary combiantor rule
+(Nnum (CD 1,000) (NN yen))
+ schema: (Nnum {287} {288})  cur: (Nnum (CD 1,000) (NN yen))  incomplete:
+Unary schema:
+ schema: (NP {289})  cur: (NP {289})  incomplete: ({289}, self)
+resolved: (NP (CD 1,000) (NN yen))
+ schema: (NP {289})  cur: (NP (CD 1,000) (NN yen))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBD paid))
+ schema: (VP 283 284)  cur: (VP (VBD paid) 284)  incomplete: (284, self)
+(VP {0} 2)
+(S 1 0)
+(NP (CD 1,000) (NN yen))
+ schema: (NP {289})  cur: (NP (CD 1,000) (NN yen))  incomplete:
+resolved: (VP (VBD paid) (NP (CD 1,000) (NN yen)))
+ schema: (VP 283 284)  cur: (VP (VBD paid) obj)  incomplete:
+(VP {0} 2)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN for))
+ schema: (PP 290 291)  cur: (PP (IN for) 291)  incomplete: (291, self)
 
 using lex combiantor rule
 resolved: (NP (DT this))
- schema: (NP 103 {104})  cur: (NP (DT this) {104})  incomplete: ({104}, self)
+ schema: (NP 292 {293})  cur: (NP (DT this) {293})  incomplete: ({293}, self)
 
 using lex combiantor rule
-resolved: (N (NN guitar))
- schema: (N 105)  cur: (N (NN guitar))  incomplete:
+resolved: (N (NN book))
+ schema: (N 294)  cur: (N (NN book))  incomplete:
 
 using fa.f combiantor rule
 (NP (DT this))
- schema: (NP 103 {104})  cur: (NP (DT this) {104})  incomplete: ({104}, self)
-(N (NN guitar))
- schema: (N 105)  cur: (N (NN guitar))  incomplete:
-resolved: (NP (DT this) (NN guitar))
- schema: (NP 103 {104})  cur: (NP (DT this) (NN guitar))  incomplete:
+ schema: (NP 292 {293})  cur: (NP (DT this) {293})  incomplete: ({293}, self)
+(N (NN book))
+ schema: (N 294)  cur: (N (NN book))  incomplete:
+resolved: (NP (DT this) (NN book))
+ schema: (NP 292 {293})  cur: (NP (DT this) (NN book))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 295)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (DT this) (NN book))
+ schema: (NP 292 {293})  cur: (NP (DT this) (NN book))  incomplete:
+(. .)
+ schema: {(. 295)}  cur: {(. (. .))}  incomplete:
+this .
+resolved: (NP (DT this) (NN book) (. .))
+ schema: (NP 292 {293})  cur: (NP (DT this) (NN book) (. .))  incomplete:
 
 using fa.f combiantor rule
-(SQ (VBZ does))
- schema: (SQ 101 102)  cur: (SQ (VBZ does) 102)  incomplete: (102, self)
-(SQ {0} 1)
-(NP (DT this) (NN guitar))
- schema: (NP 103 {104})  cur: (NP (DT this) (NN guitar))  incomplete:
-resolved: (SQ (VBZ does) (NP (DT this) (NN guitar)))
- schema: (SQ 101 102)  cur: (SQ (VBZ does) obj)  incomplete:
+(PP (IN for))
+ schema: (PP 290 291)  cur: (PP (IN for) 291)  incomplete: (291, self)
+(NP (DT this) (NN book) (. .))
+ schema: (NP 292 {293})  cur: (NP (DT this) (NN book) (. .))  incomplete:
+resolved: (PP (IN for) (NP (DT this) (NN book) (. .)))
+ schema: (PP 290 291)  cur: (PP (IN for) obj)  incomplete:
+
+using fa.f combiantor rule
+(VP (VBD paid) (NP (CD 1,000) (NN yen)))
+ schema: (VP 283 284)  cur: (VP (VBD paid) obj)  incomplete:
+(VP {0} 2)
+(S 1 0)
+(PP (IN for) (NP (DT this) (NN book) (. .)))
+ schema: (PP 290 291)  cur: (PP (IN for) obj)  incomplete:
+resolved: (VP (VBD paid) (NP (CD 1,000) (NN yen)) (PP (IN for) (NP (DT this) (NN book) (. .))))
+ schema: (VP {296} 297)  cur: (VP (VBD paid) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP He))
+ schema: (NP 282)  cur: (NP (PRP He))  incomplete:
+(VP (VBD paid) (NP (CD 1,000) (NN yen)) (PP (IN for) (NP (DT this) (NN book) (. .))))
+ schema: (VP {296} 297)  cur: (VP (VBD paid) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP He)) (VP (VBD paid) (NP (CD 1,000) (NN yen)) (PP (IN for) (NP (DT this) (NN book) (. .)))))
+ schema: (S 298 299)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBD paid)
+			(NP
+				(CD 1,000)
+				(NN yen))
+			(PP
+				(IN for)
+				(NP
+					(DT this)
+					(NN book)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBD paid)
+			(NP
+				(CD 1,000)
+				(NN yen))
+			(PP
+				(IN for)
+				(NP
+					(DT this)
+					(NN book)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP He))
+ schema: (NP 300)  cur: (NP (PRP He))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ does))
+ schema: (VP 301 302)  cur: (VP (VBZ does) 302)  incomplete: (302, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (RB not)
+ schema: {(TEMP 303)}  cur: {(TEMP (RB not))}  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using cc.b combiantor rule
+(VP (VBZ does))
+ schema: (VP 301 302)  cur: (VP (VBZ does) 302)  incomplete: (302, self)
+(S 1 0)
+(RB not)
+ schema: {(TEMP 303)}  cur: {(TEMP (RB not))}  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBZ does) (RB not))
+ schema: (VP 301 302)  cur: (VP (VBZ does) (RB not) 302)  incomplete: (302, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VB like))
+ schema: (VP 306 307)  cur: (VP (VB like) 307)  incomplete: (307, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNS cats))
+ schema: (N 308)  cur: (N (NNS cats))  incomplete:
+
+using unary combiantor rule
+(N (NNS cats))
+ schema: (N 308)  cur: (N (NNS cats))  incomplete:
+Unary schema:
+ schema: (NP {309})  cur: (NP {309})  incomplete: ({309}, self)
+resolved: (NP (NNS cats))
+ schema: (NP {309})  cur: (NP (NNS cats))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 310)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NNS cats))
+ schema: (NP {309})  cur: (NP (NNS cats))  incomplete:
+(. .)
+ schema: {(. 310)}  cur: {(. (. .))}  incomplete:
+cats .
+resolved: (NP (NNS cats) (. .))
+ schema: (NP {309})  cur: (NP (NNS cats) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VB like))
+ schema: (VP 306 307)  cur: (VP (VB like) 307)  incomplete: (307, self)
+(S 1 0)
+(NP (NNS cats) (. .))
+ schema: (NP {309})  cur: (NP (NNS cats) (. .))  incomplete:
+resolved: (VP (VB like) (NP (NNS cats) (. .)))
+ schema: (VP 306 307)  cur: (VP (VB like) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ does) (RB not))
+ schema: (VP 301 302)  cur: (VP (VBZ does) (RB not) 302)  incomplete: (302, self)
+(S 1 0)
+(VP (VB like) (NP (NNS cats) (. .)))
+ schema: (VP 306 307)  cur: (VP (VB like) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBZ does) (RB not) (VP (VB like) (NP (NNS cats) (. .))))
+ schema: (VP 301 302)  cur: (VP (VBZ does) (RB not) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP He))
+ schema: (NP 300)  cur: (NP (PRP He))  incomplete:
+(VP (VBZ does) (RB not) (VP (VB like) (NP (NNS cats) (. .))))
+ schema: (VP 301 302)  cur: (VP (VBZ does) (RB not) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP He)) (VP (VBZ does) (RB not) (VP (VB like) (NP (NNS cats) (. .)))))
+ schema: (S 311 312)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBZ does)
+			(RB not)
+			(VP
+				(VB like)
+				(NP
+					(NNS cats)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBZ does)
+			(RB not)
+			(VP
+				(VB like)
+				(NP
+					(NNS cats)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (DT This))
+ schema: (NP 313 {314})  cur: (NP (DT This) {314})  incomplete: ({314}, self)
+
+using lex combiantor rule
+resolved: (N (NN snake))
+ schema: (N 315)  cur: (N (NN snake))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT This))
+ schema: (NP 313 {314})  cur: (NP (DT This) {314})  incomplete: ({314}, self)
+(N (NN snake))
+ schema: (N 315)  cur: (N (NN snake))  incomplete:
+resolved: (NP (DT This) (NN snake))
+ schema: (NP 313 {314})  cur: (NP (DT This) (NN snake))  incomplete:
+
+using lex combiantor rule
+resolved: (VBZ is)
+ schema: {(TEMP 316)}  cur: {(TEMP (VBZ is))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (RB not)
+ schema: {(TEMP 317)}  cur: {(TEMP (RB not))}  incomplete:
+(ADJP 0 {1})
+(S 1 0)
+
+using lex combiantor rule
+resolved: (JJ venomous)
+ schema: {(TEMP 318)}  cur: {(TEMP (JJ venomous))}  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(RB not)
+ schema: {(TEMP 317)}  cur: {(TEMP (RB not))}  incomplete:
+(ADJP 0 {1})
+(S 1 0)
+(JJ venomous)
+ schema: {(TEMP 318)}  cur: {(TEMP (JJ venomous))}  incomplete:
+(S 1 0)
+resolved: (ADJP (RB not) (JJ venomous))
+ schema: (ADJP 319 {320})  cur: (ADJP (RB not) (JJ venomous))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VBZ is)
+ schema: {(TEMP 316)}  cur: {(TEMP (VBZ is))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+(ADJP (RB not) (JJ venomous))
+ schema: (ADJP 319 {320})  cur: (ADJP (RB not) (JJ venomous))  incomplete:
+(S 1 0)
+resolved: (VP (VBZ is) (ADJP (ADJP (RB not) (JJ venomous))))
+ schema: (VP 321 (ADJP 322))  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 323)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (VBZ is) (ADJP (ADJP (RB not) (JJ venomous))))
+ schema: (VP 321 (ADJP 322))  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 323)}  cur: {(. (. .))}  incomplete:
+is .
+resolved: (VP (VBZ is) (ADJP (ADJP (RB not) (JJ venomous))) (. .))
+ schema: (VP 321 (ADJP 322))  cur: (VP (VBZ is) obj (. .))  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (DT This) (NN snake))
+ schema: (NP 313 {314})  cur: (NP (DT This) (NN snake))  incomplete:
+(VP (VBZ is) (ADJP (ADJP (RB not) (JJ venomous))) (. .))
+ schema: (VP 321 (ADJP 322))  cur: (VP (VBZ is) obj (. .))  incomplete:
+(S 1 0)
+resolved: (S (NP (DT This) (NN snake)) (VP (VBZ is) (ADJP (ADJP (RB not) (JJ venomous))) (. .)))
+ schema: (S 324 325)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(DT This)
+			(NN snake))
+		(VP
+			(VBZ is)
+			(ADJP
+				(ADJP
+					(RB not)
+					(JJ venomous)))
+			(. .))))
+duplicate!
+(ADJP (ADJP (RB not) (JJ venomous)))
+(ADJP (RB not) (JJ venomous))
+cleaned: (ROOT
+	(S
+		(NP
+			(DT This)
+			(NN snake))
+		(VP
+			(VBZ is)
+			(ADJP
+				(RB not)
+				(JJ venomous))
+			(. .))))
+
+using lex combiantor rule
+resolved: (Nslash (NNP Mr.))
+ schema: (Nslash 326)  cur: (Nslash (NNP Mr.))  incomplete:
+(N {0} {1}) POS:default
+
+using lex combiantor rule
+resolved: (N (NNP Smith))
+ schema: (N 327)  cur: (N (NNP Smith))  incomplete:
+
+using fa.f combiantor rule
+(Nslash (NNP Mr.))
+ schema: (Nslash 326)  cur: (Nslash (NNP Mr.))  incomplete:
+(N {0} {1}) POS:default
+(N (NNP Smith))
+ schema: (N 327)  cur: (N (NNP Smith))  incomplete:
+resolved: (N (NNP Mr.) (NNP Smith))
+ schema: (N {328} {329})  cur: (N (NNP Mr.) (NNP Smith))  incomplete:
+
+using unary combiantor rule
+(N (NNP Mr.) (NNP Smith))
+ schema: (N {328} {329})  cur: (N (NNP Mr.) (NNP Smith))  incomplete:
+Unary schema:
+ schema: (NP {330})  cur: (NP {330})  incomplete: ({330}, self)
+resolved: (NP (NNP Mr.) (NNP Smith))
+ schema: (NP {330})  cur: (NP (NNP Mr.) (NNP Smith))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD came))
+ schema: (VP 331)  cur: (VP (VBD came))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 332)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (VBD came))
+ schema: (VP 331)  cur: (VP (VBD came))  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 332)}  cur: {(. (. .))}  incomplete:
+came .
+resolved: (VP (VBD came) (. .))
+ schema: (VP 331)  cur: (VP (VBD came) (. .))  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Mr.) (NNP Smith))
+ schema: (NP {330})  cur: (NP (NNP Mr.) (NNP Smith))  incomplete:
+(VP (VBD came) (. .))
+ schema: (VP 331)  cur: (VP (VBD came) (. .))  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Mr.) (NNP Smith)) (VP (VBD came) (. .)))
+ schema: (S 333 334)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Mr.)
+			(NNP Smith))
+		(VP
+			(VBD came)
+			(. .))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Mr.)
+			(NNP Smith))
+		(VP
+			(VBD came)
+			(. .))))
+
+using lex combiantor rule
+Missing category: NP/(N/PP) asked for by lex
+resolved: (NP (PRP$ My))
+ schema: (NP 335 336)  cur: (NP (PRP$ My) 336)  incomplete: (336, self)
+(NP 0)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN butt))
+ schema: (NP 337 338)  cur: (NP (NN butt) 338)  incomplete: (338, self)
+(N 0)
+
+using fa.f combiantor rule
+(NP (PRP$ My))
+ schema: (NP 335 336)  cur: (NP (PRP$ My) 336)  incomplete: (336, self)
+(NP 0)
+(NP (NN butt))
+ schema: (NP 337 338)  cur: (NP (NN butt) 338)  incomplete: (338, self)
+(N 0)
+resolved: (NP (PRP$ My) (NP (NN butt)))
+ schema: (NP 335 336)  cur: (NP (PRP$ My) obj)  incomplete:
+(NP 0)
+
+using lex combiantor rule
+resolved: (VP (NNS hurts))
+ schema: (VP 339)  cur: (VP (NNS hurts))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 340)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (NNS hurts))
+ schema: (VP 339)  cur: (VP (NNS hurts))  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 340)}  cur: {(. (. .))}  incomplete:
+hurts .
+resolved: (VP (NNS hurts) (. .))
+ schema: (VP 339)  cur: (VP (NNS hurts) (. .))  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP$ My) (NP (NN butt)))
+ schema: (NP 335 336)  cur: (NP (PRP$ My) obj)  incomplete:
+(NP 0)
+(VP (NNS hurts) (. .))
+ schema: (VP 339)  cur: (VP (NNS hurts) (. .))  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP$ My) (NP (NN butt))) (VP (NNS hurts) (. .)))
+ schema: (S 341 342)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP$ My)
+			(NP
+				(NN butt)))
+		(VP
+			(NNS hurts)
+			(. .))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP$ My)
+			(NP
+				(NN butt)))
+		(VP
+			(NNS hurts)
+			(. .))))
+
+using lex combiantor rule
+resolved: (NP (PRP She))
+ schema: (NP 343)  cur: (NP (PRP She))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ \s))
+ schema: (VP 344 345)  cur: (VP (VBZ \s) 345)  incomplete: (345, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBG wearing))
+ schema: (VP 346 347)  cur: (VP (VBG wearing) 347)  incomplete: (347, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNS sunglasses))
+ schema: (N 348)  cur: (N (NNS sunglasses))  incomplete:
+
+using unary combiantor rule
+(N (NNS sunglasses))
+ schema: (N 348)  cur: (N (NNS sunglasses))  incomplete:
+Unary schema:
+ schema: (NP {349})  cur: (NP {349})  incomplete: ({349}, self)
+resolved: (NP (NNS sunglasses))
+ schema: (NP {349})  cur: (NP (NNS sunglasses))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 350)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NNS sunglasses))
+ schema: (NP {349})  cur: (NP (NNS sunglasses))  incomplete:
+(. .)
+ schema: {(. 350)}  cur: {(. (. .))}  incomplete:
+sunglasses .
+resolved: (NP (NNS sunglasses) (. .))
+ schema: (NP {349})  cur: (NP (NNS sunglasses) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBG wearing))
+ schema: (VP 346 347)  cur: (VP (VBG wearing) 347)  incomplete: (347, self)
+(S 1 0)
+(NP (NNS sunglasses) (. .))
+ schema: (NP {349})  cur: (NP (NNS sunglasses) (. .))  incomplete:
+resolved: (VP (VBG wearing) (NP (NNS sunglasses) (. .)))
+ schema: (VP 346 347)  cur: (VP (VBG wearing) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ \s))
+ schema: (VP 344 345)  cur: (VP (VBZ \s) 345)  incomplete: (345, self)
+(S 1 0)
+(VP (VBG wearing) (NP (NNS sunglasses) (. .)))
+ schema: (VP 346 347)  cur: (VP (VBG wearing) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBZ \s) (VP (VBG wearing) (NP (NNS sunglasses) (. .))))
+ schema: (VP 344 345)  cur: (VP (VBZ \s) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP She))
+ schema: (NP 343)  cur: (NP (PRP She))  incomplete:
+(VP (VBZ \s) (VP (VBG wearing) (NP (NNS sunglasses) (. .))))
+ schema: (VP 344 345)  cur: (VP (VBZ \s) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP She)) (VP (VBZ \s) (VP (VBG wearing) (NP (NNS sunglasses) (. .)))))
+ schema: (S 351 352)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP She))
+		(VP
+			(VBZ \s)
+			(VP
+				(VBG wearing)
+				(NP
+					(NNS sunglasses)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP She))
+		(VP
+			(VBZ \s)
+			(VP
+				(VBG wearing)
+				(NP
+					(NNS sunglasses)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP He))
+ schema: (NP 353)  cur: (NP (PRP He))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ \s))
+ schema: (VP 354 355)  cur: (VP (VBZ \s) 355)  incomplete: (355, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBG studying))
+ schema: (VP 356 357)  cur: (VP (VBG studying) 357)  incomplete: (357, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNP Chinese))
+ schema: (N 358)  cur: (N (NNP Chinese))  incomplete:
+
+using unary combiantor rule
+(N (NNP Chinese))
+ schema: (N 358)  cur: (N (NNP Chinese))  incomplete:
+Unary schema:
+ schema: (NP {359})  cur: (NP {359})  incomplete: ({359}, self)
+resolved: (NP (NNP Chinese))
+ schema: (NP {359})  cur: (NP (NNP Chinese))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 360)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NNP Chinese))
+ schema: (NP {359})  cur: (NP (NNP Chinese))  incomplete:
+(. .)
+ schema: {(. 360)}  cur: {(. (. .))}  incomplete:
+Chinese .
+resolved: (NP (NNP Chinese) (. .))
+ schema: (NP {359})  cur: (NP (NNP Chinese) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBG studying))
+ schema: (VP 356 357)  cur: (VP (VBG studying) 357)  incomplete: (357, self)
+(S 1 0)
+(NP (NNP Chinese) (. .))
+ schema: (NP {359})  cur: (NP (NNP Chinese) (. .))  incomplete:
+resolved: (VP (VBG studying) (NP (NNP Chinese) (. .)))
+ schema: (VP 356 357)  cur: (VP (VBG studying) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ \s))
+ schema: (VP 354 355)  cur: (VP (VBZ \s) 355)  incomplete: (355, self)
+(S 1 0)
+(VP (VBG studying) (NP (NNP Chinese) (. .)))
+ schema: (VP 356 357)  cur: (VP (VBG studying) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBZ \s) (VP (VBG studying) (NP (NNP Chinese) (. .))))
+ schema: (VP 354 355)  cur: (VP (VBZ \s) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP He))
+ schema: (NP 353)  cur: (NP (PRP He))  incomplete:
+(VP (VBZ \s) (VP (VBG studying) (NP (NNP Chinese) (. .))))
+ schema: (VP 354 355)  cur: (VP (VBZ \s) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP He)) (VP (VBZ \s) (VP (VBG studying) (NP (NNP Chinese) (. .)))))
+ schema: (S 361 362)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBZ \s)
+			(VP
+				(VBG studying)
+				(NP
+					(NNP Chinese)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBZ \s)
+			(VP
+				(VBG studying)
+				(NP
+					(NNP Chinese)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP He))
+ schema: (NP 363)  cur: (NP (PRP He))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD brewed))
+ schema: (VP 364 365)  cur: (VP (VBD brewed) 365)  incomplete: (365, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NN beer))
+ schema: (N 366)  cur: (N (NN beer))  incomplete:
+
+using unary combiantor rule
+(N (NN beer))
+ schema: (N 366)  cur: (N (NN beer))  incomplete:
+Unary schema:
+ schema: (NP {367})  cur: (NP {367})  incomplete: ({367}, self)
+resolved: (NP (NN beer))
+ schema: (NP {367})  cur: (NP (NN beer))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 368)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NN beer))
+ schema: (NP {367})  cur: (NP (NN beer))  incomplete:
+(. .)
+ schema: {(. 368)}  cur: {(. (. .))}  incomplete:
+beer .
+resolved: (NP (NN beer) (. .))
+ schema: (NP {367})  cur: (NP (NN beer) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBD brewed))
+ schema: (VP 364 365)  cur: (VP (VBD brewed) 365)  incomplete: (365, self)
+(S 1 0)
+(NP (NN beer) (. .))
+ schema: (NP {367})  cur: (NP (NN beer) (. .))  incomplete:
+resolved: (VP (VBD brewed) (NP (NN beer) (. .)))
+ schema: (VP 364 365)  cur: (VP (VBD brewed) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP He))
+ schema: (NP 363)  cur: (NP (PRP He))  incomplete:
+(VP (VBD brewed) (NP (NN beer) (. .)))
+ schema: (VP 364 365)  cur: (VP (VBD brewed) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP He)) (VP (VBD brewed) (NP (NN beer) (. .))))
+ schema: (S 369 370)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBD brewed)
+			(NP
+				(NN beer)
+				(. .)))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP He))
+		(VP
+			(VBD brewed)
+			(NP
+				(NN beer)
+				(. .)))))
+
+using lex combiantor rule
+resolved: (NP (PRP She))
+ schema: (NP 371)  cur: (NP (PRP She))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ suffers))
+ schema: (VP 372 373)  cur: (VP (VBZ suffers) 373)  incomplete: (373, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN from))
+ schema: (PP 374 375)  cur: (PP (IN from) 375)  incomplete: (375, self)
+
+using lex combiantor rule
+resolved: (NP (DT a))
+ schema: (NP 376 {377})  cur: (NP (DT a) {377})  incomplete: ({377}, self)
+
+using lex combiantor rule
+resolved: (Nslash (JJ contagious))
+ schema: (Nslash 378)  cur: (Nslash (JJ contagious))  incomplete:
+(N {0} {1}) POS:default
+
+using lex combiantor rule
+resolved: (N (NN disease))
+ schema: (N 379)  cur: (N (NN disease))  incomplete:
+
+using fa.f combiantor rule
+(Nslash (JJ contagious))
+ schema: (Nslash 378)  cur: (Nslash (JJ contagious))  incomplete:
+(N {0} {1}) POS:default
+(N (NN disease))
+ schema: (N 379)  cur: (N (NN disease))  incomplete:
+resolved: (N (JJ contagious) (NN disease))
+ schema: (N {380} {381})  cur: (N (JJ contagious) (NN disease))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT a))
+ schema: (NP 376 {377})  cur: (NP (DT a) {377})  incomplete: ({377}, self)
+(N (JJ contagious) (NN disease))
+ schema: (N {380} {381})  cur: (N (JJ contagious) (NN disease))  incomplete:
+resolved: (NP (DT a) (JJ contagious) (NN disease))
+ schema: (NP 376 {377})  cur: (NP (DT a) (JJ contagious) (NN disease))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 382)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (DT a) (JJ contagious) (NN disease))
+ schema: (NP 376 {377})  cur: (NP (DT a) (JJ contagious) (NN disease))  incomplete:
+(. .)
+ schema: {(. 382)}  cur: {(. (. .))}  incomplete:
+a .
+resolved: (NP (DT a) (JJ contagious) (NN disease) (. .))
+ schema: (NP 376 {377})  cur: (NP (DT a) (JJ contagious) (NN disease) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN from))
+ schema: (PP 374 375)  cur: (PP (IN from) 375)  incomplete: (375, self)
+(NP (DT a) (JJ contagious) (NN disease) (. .))
+ schema: (NP 376 {377})  cur: (NP (DT a) (JJ contagious) (NN disease) (. .))  incomplete:
+resolved: (PP (IN from) (NP (DT a) (JJ contagious) (NN disease) (. .)))
+ schema: (PP 374 375)  cur: (PP (IN from) obj)  incomplete:
+
+using fa.f combiantor rule
+(VP (VBZ suffers))
+ schema: (VP 372 373)  cur: (VP (VBZ suffers) 373)  incomplete: (373, self)
+(S 1 0)
+(PP (IN from) (NP (DT a) (JJ contagious) (NN disease) (. .)))
+ schema: (PP 374 375)  cur: (PP (IN from) obj)  incomplete:
+resolved: (VP (VBZ suffers) (PP (IN from) (NP (DT a) (JJ contagious) (NN disease) (. .))))
+ schema: (VP 372 373)  cur: (VP (VBZ suffers) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP She))
+ schema: (NP 371)  cur: (NP (PRP She))  incomplete:
+(VP (VBZ suffers) (PP (IN from) (NP (DT a) (JJ contagious) (NN disease) (. .))))
+ schema: (VP 372 373)  cur: (VP (VBZ suffers) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP She)) (VP (VBZ suffers) (PP (IN from) (NP (DT a) (JJ contagious) (NN disease) (. .)))))
+ schema: (S 383 384)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP She))
+		(VP
+			(VBZ suffers)
+			(PP
+				(IN from)
+				(NP
+					(DT a)
+					(JJ contagious)
+					(NN disease)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP She))
+		(VP
+			(VBZ suffers)
+			(PP
+				(IN from)
+				(NP
+					(DT a)
+					(JJ contagious)
+					(NN disease)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (PRP I))
+ schema: (NP 385)  cur: (NP (PRP I))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD was))
+ schema: (VP 386 387)  cur: (VP (VBD was) 387)  incomplete: (387, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBN born))
+ schema: (VP 388)  cur: (VP (VBN born))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBD was))
+ schema: (VP 386 387)  cur: (VP (VBD was) 387)  incomplete: (387, self)
+(S 1 0)
+(VP (VBN born))
+ schema: (VP 388)  cur: (VP (VBN born))  incomplete:
+(S 1 0)
+resolved: (VP (VBD was) (VP (VBN born)))
+ schema: (VP 386 387)  cur: (VP (VBD was) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 389 390)  cur: (PP (IN in) 390)  incomplete: (390, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNP Russia))
+ schema: (N 391)  cur: (N (NNP Russia))  incomplete:
+
+using unary combiantor rule
+(N (NNP Russia))
+ schema: (N 391)  cur: (N (NNP Russia))  incomplete:
+Unary schema:
+ schema: (NP {392})  cur: (NP {392})  incomplete: ({392}, self)
+resolved: (NP (NNP Russia))
+ schema: (NP {392})  cur: (NP (NNP Russia))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 389 390)  cur: (PP (IN in) 390)  incomplete: (390, self)
+(VP {1} 0)
+(S 1 0)
+(NP (NNP Russia))
+ schema: (NP {392})  cur: (NP (NNP Russia))  incomplete:
+resolved: (PP (IN in) (NP (NNP Russia)))
+ schema: (PP 389 390)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBD was) (VP (VBN born)))
+ schema: (VP 386 387)  cur: (VP (VBD was) obj)  incomplete:
+(S 1 0)
+(PP (IN in) (NP (NNP Russia)))
+ schema: (PP 389 390)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBD was) (VP (VBN born)) (PP (IN in) (NP (NNP Russia))))
+ schema: (VP {393} 394)  cur: (VP (VBD was) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP I))
+ schema: (NP 385)  cur: (NP (PRP I))  incomplete:
+(VP (VBD was) (VP (VBN born)) (PP (IN in) (NP (NNP Russia))))
+ schema: (VP {393} 394)  cur: (VP (VBD was) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP I)) (VP (VBD was) (VP (VBN born)) (PP (IN in) (NP (NNP Russia)))))
+ schema: (S 395 396)  cur: (S obj obj)  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 397)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(S (NP (PRP I)) (VP (VBD was) (VP (VBN born)) (PP (IN in) (NP (NNP Russia)))))
+ schema: (S 395 396)  cur: (S obj obj)  incomplete:
+(. .)
+ schema: {(. 397)}  cur: {(. (. .))}  incomplete:
+I .
+resolved: (S (NP (PRP I)) (VP (VBD was) (VP (VBN born)) (PP (IN in) (NP (NNP Russia)))) (. .))
+ schema: (S 395 396)  cur: (S obj obj (. .))  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBD was)
+			(VP
+				(VBN born))
+			(PP
+				(IN in)
+				(NP
+					(NNP Russia))))
+		(. .)))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBD was)
+			(VP
+				(VBN born))
+			(PP
+				(IN in)
+				(NP
+					(NNP Russia))))
+		(. .)))
+
+using lex combiantor rule
+resolved: (NP (DT The))
+ schema: (NP 398 {399})  cur: (NP (DT The) {399})  incomplete: ({399}, self)
+
+using lex combiantor rule
+resolved: (N (NN park))
+ schema: (N 400)  cur: (N (NN park))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT The))
+ schema: (NP 398 {399})  cur: (NP (DT The) {399})  incomplete: ({399}, self)
+(N (NN park))
+ schema: (N 400)  cur: (N (NN park))  incomplete:
+resolved: (NP (DT The) (NN park))
+ schema: (NP 398 {399})  cur: (NP (DT The) (NN park))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ is))
+ schema: (VP 401 402)  cur: (VP (VBZ is) 402)  incomplete: (402, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBN located))
+ schema: (VP 403)  cur: (VP (VBN located))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ is))
+ schema: (VP 401 402)  cur: (VP (VBZ is) 402)  incomplete: (402, self)
+(S 1 0)
+(VP (VBN located))
+ schema: (VP 403)  cur: (VP (VBN located))  incomplete:
+(S 1 0)
+resolved: (VP (VBZ is) (VP (VBN located)))
+ schema: (VP 401 402)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 404 405)  cur: (PP (IN in) 405)  incomplete: (405, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (DT the))
+ schema: (NP 406 {407})  cur: (NP (DT the) {407})  incomplete: ({407}, self)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN center))
+ schema: (NP 408 409)  cur: (NP (NN center) 409)  incomplete: (409, self)
+(N 0)
+
+using lex combiantor rule
+resolved: (PP (IN of))
+ schema: (PP 410 411)  cur: (PP (IN of) 411)  incomplete: (411, self)
+
+using lex combiantor rule
+resolved: (NP (DT the))
+ schema: (NP 412 {413})  cur: (NP (DT the) {413})  incomplete: ({413}, self)
+
+using lex combiantor rule
+resolved: (N (NN city))
+ schema: (N 414)  cur: (N (NN city))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT the))
+ schema: (NP 412 {413})  cur: (NP (DT the) {413})  incomplete: ({413}, self)
+(N (NN city))
+ schema: (N 414)  cur: (N (NN city))  incomplete:
+resolved: (NP (DT the) (NN city))
+ schema: (NP 412 {413})  cur: (NP (DT the) (NN city))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN of))
+ schema: (PP 410 411)  cur: (PP (IN of) 411)  incomplete: (411, self)
+(NP (DT the) (NN city))
+ schema: (NP 412 {413})  cur: (NP (DT the) (NN city))  incomplete:
+resolved: (PP (IN of) (NP (DT the) (NN city)))
+ schema: (PP 410 411)  cur: (PP (IN of) obj)  incomplete:
+
+using fa.f combiantor rule
+(NP (NN center))
+ schema: (NP 408 409)  cur: (NP (NN center) 409)  incomplete: (409, self)
+(N 0)
+(PP (IN of) (NP (DT the) (NN city)))
+ schema: (PP 410 411)  cur: (PP (IN of) obj)  incomplete:
+resolved: (NP (NN center) (PP (IN of) (NP (DT the) (NN city))))
+ schema: (NP 408 409)  cur: (NP (NN center) obj)  incomplete:
+(N 0)
+
+using fa.f combiantor rule
+(NP (DT the))
+ schema: (NP 406 {407})  cur: (NP (DT the) {407})  incomplete: ({407}, self)
+(NP (NN center) (PP (IN of) (NP (DT the) (NN city))))
+ schema: (NP 408 409)  cur: (NP (NN center) obj)  incomplete:
+(N 0)
+resolved: (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city))))
+ schema: (NP 406 {407})  cur: (NP (DT the) (NN center) obj)  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 404 405)  cur: (PP (IN in) 405)  incomplete: (405, self)
+(VP {1} 0)
+(S 1 0)
+(NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city))))
+ schema: (NP 406 {407})  cur: (NP (DT the) (NN center) obj)  incomplete:
+resolved: (PP (IN in) (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city)))))
+ schema: (PP 404 405)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBZ is) (VP (VBN located)))
+ schema: (VP 401 402)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+(PP (IN in) (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city)))))
+ schema: (PP 404 405)  cur: (PP (IN in) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city))))))
+ schema: (VP {415} 416)  cur: (VP (VBZ is) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (DT The) (NN park))
+ schema: (NP 398 {399})  cur: (NP (DT The) (NN park))  incomplete:
+(VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city))))))
+ schema: (VP {415} 416)  cur: (VP (VBZ is) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (DT The) (NN park)) (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city)))))))
+ schema: (S 417 418)  cur: (S obj obj)  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 419)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(S (NP (DT The) (NN park)) (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city)))))))
+ schema: (S 417 418)  cur: (S obj obj)  incomplete:
+(. .)
+ schema: {(. 419)}  cur: {(. (. .))}  incomplete:
+The .
+resolved: (S (NP (DT The) (NN park)) (VP (VBZ is) (VP (VBN located)) (PP (IN in) (NP (DT the) (NN center) (PP (IN of) (NP (DT the) (NN city)))))) (. .))
+ schema: (S 417 418)  cur: (S obj obj (. .))  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(DT The)
+			(NN park))
+		(VP
+			(VBZ is)
+			(VP
+				(VBN located))
+			(PP
+				(IN in)
+				(NP
+					(DT the)
+					(NN center)
+					(PP
+						(IN of)
+						(NP
+							(DT the)
+							(NN city))))))
+		(. .)))
+cleaned: (ROOT
+	(S
+		(NP
+			(DT The)
+			(NN park))
+		(VP
+			(VBZ is)
+			(VP
+				(VBN located))
+			(PP
+				(IN in)
+				(NP
+					(DT the)
+					(NN center)
+					(PP
+						(IN of)
+						(NP
+							(DT the)
+							(NN city))))))
+		(. .)))
+
+using lex combiantor rule
+resolved: (N (NNP John~Dalton))
+ schema: (N 420)  cur: (N (NNP John~Dalton))  incomplete:
+
+using unary combiantor rule
+(N (NNP John~Dalton))
+ schema: (N 420)  cur: (N (NNP John~Dalton))  incomplete:
+Unary schema:
+ schema: (NP {421})  cur: (NP {421})  incomplete: ({421}, self)
+resolved: (NP (NNP John~Dalton))
+ schema: (NP {421})  cur: (NP (NNP John~Dalton))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD created))
+ schema: (VP 422 423)  cur: (VP (VBD created) 423)  incomplete: (423, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (DT the))
+ schema: (NP 424 {425})  cur: (NP (DT the) {425})  incomplete: ({425}, self)
+
+using lex combiantor rule
+resolved: (N (NNP Atomic~Theory))
+ schema: (N 426)  cur: (N (NNP Atomic~Theory))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT the))
+ schema: (NP 424 {425})  cur: (NP (DT the) {425})  incomplete: ({425}, self)
+(N (NNP Atomic~Theory))
+ schema: (N 426)  cur: (N (NNP Atomic~Theory))  incomplete:
+resolved: (NP (DT the) (NNP Atomic~Theory))
+ schema: (NP 424 {425})  cur: (NP (DT the) (NNP Atomic~Theory))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 427)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (DT the) (NNP Atomic~Theory))
+ schema: (NP 424 {425})  cur: (NP (DT the) (NNP Atomic~Theory))  incomplete:
+(. .)
+ schema: {(. 427)}  cur: {(. (. .))}  incomplete:
+the .
+resolved: (NP (DT the) (NNP Atomic~Theory) (. .))
+ schema: (NP 424 {425})  cur: (NP (DT the) (NNP Atomic~Theory) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBD created))
+ schema: (VP 422 423)  cur: (VP (VBD created) 423)  incomplete: (423, self)
+(S 1 0)
+(NP (DT the) (NNP Atomic~Theory) (. .))
+ schema: (NP 424 {425})  cur: (NP (DT the) (NNP Atomic~Theory) (. .))  incomplete:
+resolved: (VP (VBD created) (NP (DT the) (NNP Atomic~Theory) (. .)))
+ schema: (VP 422 423)  cur: (VP (VBD created) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP John~Dalton))
+ schema: (NP {421})  cur: (NP (NNP John~Dalton))  incomplete:
+(VP (VBD created) (NP (DT the) (NNP Atomic~Theory) (. .)))
+ schema: (VP 422 423)  cur: (VP (VBD created) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP John~Dalton)) (VP (VBD created) (NP (DT the) (NNP Atomic~Theory) (. .))))
+ schema: (S 428 429)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP John~Dalton))
+		(VP
+			(VBD created)
+			(NP
+				(DT the)
+				(NNP Atomic~Theory)
+				(. .)))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP John~Dalton))
+		(VP
+			(VBD created)
+			(NP
+				(DT the)
+				(NNP Atomic~Theory)
+				(. .)))))
+
+using lex combiantor rule
+resolved: (N (NNP Tom))
+ schema: (N 430)  cur: (N (NNP Tom))  incomplete:
+
+using unary combiantor rule
+(N (NNP Tom))
+ schema: (N 430)  cur: (N (NNP Tom))  incomplete:
+Unary schema:
+ schema: (NP {431})  cur: (NP {431})  incomplete: ({431}, self)
+resolved: (NP (NNP Tom))
+ schema: (NP {431})  cur: (NP (NNP Tom))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD spilled))
+ schema: (VP 432 433)  cur: (VP (VBD spilled) 433)  incomplete: (433, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (DT the))
+ schema: (NP 434 {435})  cur: (NP (DT the) {435})  incomplete: ({435}, self)
+
+using lex combiantor rule
+resolved: (N (NN milk))
+ schema: (N 436)  cur: (N (NN milk))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT the))
+ schema: (NP 434 {435})  cur: (NP (DT the) {435})  incomplete: ({435}, self)
+(N (NN milk))
+ schema: (N 436)  cur: (N (NN milk))  incomplete:
+resolved: (NP (DT the) (NN milk))
+ schema: (NP 434 {435})  cur: (NP (DT the) (NN milk))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 437)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (DT the) (NN milk))
+ schema: (NP 434 {435})  cur: (NP (DT the) (NN milk))  incomplete:
+(. .)
+ schema: {(. 437)}  cur: {(. (. .))}  incomplete:
+the .
+resolved: (NP (DT the) (NN milk) (. .))
+ schema: (NP 434 {435})  cur: (NP (DT the) (NN milk) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBD spilled))
+ schema: (VP 432 433)  cur: (VP (VBD spilled) 433)  incomplete: (433, self)
+(S 1 0)
+(NP (DT the) (NN milk) (. .))
+ schema: (NP 434 {435})  cur: (NP (DT the) (NN milk) (. .))  incomplete:
+resolved: (VP (VBD spilled) (NP (DT the) (NN milk) (. .)))
+ schema: (VP 432 433)  cur: (VP (VBD spilled) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Tom))
+ schema: (NP {431})  cur: (NP (NNP Tom))  incomplete:
+(VP (VBD spilled) (NP (DT the) (NN milk) (. .)))
+ schema: (VP 432 433)  cur: (VP (VBD spilled) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Tom)) (VP (VBD spilled) (NP (DT the) (NN milk) (. .))))
+ schema: (S 438 439)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Tom))
+		(VP
+			(VBD spilled)
+			(NP
+				(DT the)
+				(NN milk)
+				(. .)))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Tom))
+		(VP
+			(VBD spilled)
+			(NP
+				(DT the)
+				(NN milk)
+				(. .)))))
+
+using lex combiantor rule
+resolved: (N (NNP Mary))
+ schema: (N 440)  cur: (N (NNP Mary))  incomplete:
+
+using unary combiantor rule
+(N (NNP Mary))
+ schema: (N 440)  cur: (N (NNP Mary))  incomplete:
+Unary schema:
+ schema: (NP {441})  cur: (NP {441})  incomplete: ({441}, self)
+resolved: (NP (NNP Mary))
+ schema: (NP {441})  cur: (NP (NNP Mary))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBD was))
+ schema: (VP 442 443)  cur: (VP (VBD was) 443)  incomplete: (443, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VBN impressed))
+ schema: (VP 444 445)  cur: (VP (VBN impressed) 445)  incomplete: (445, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN with))
+ schema: (PP 446 447)  cur: (PP (IN with) 447)  incomplete: (447, self)
+
+using lex combiantor rule
+resolved: (WHNP (WP what))
+ schema: (WHNP 448)  cur: (WHNP (WP what))  incomplete:
+(SBAR 0 1)
+
+using lex combiantor rule
+resolved: (NP (PRP she))
+ schema: (NP 449)  cur: (NP (PRP she))  incomplete:
+
+using unary combiantor rule
+(NP (PRP she))
+ schema: (NP 449)  cur: (NP (PRP she))  incomplete:
+Unary schema:
+ schema: {(TEMP 450)}  cur: {(TEMP 450)}  incomplete: (450, self)
+(S 0 1)
+resolved: (NP (PRP she))
+ schema: {(TEMP 450)}  cur: {(TEMP obj)}  incomplete:
+(S 0 1)
+
+using lex combiantor rule
+resolved: (VP (VBD saw))
+ schema: (VP 451 452)  cur: (VP (VBD saw) 452)  incomplete: (452, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 453)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (VBD saw))
+ schema: (VP 451 452)  cur: (VP (VBD saw) 452)  incomplete: (452, self)
+(S 1 0)
+(. .)
+ schema: {(. 453)}  cur: {(. (. .))}  incomplete:
+saw .
+resolved: (VP (VBD saw) (. .))
+ schema: (VP 451 452)  cur: (VP (VBD saw) (. .) 452)  incomplete: (452, self)
+(S 1 0)
+
+using misc combiantor rule
+(NP (PRP she))
+ schema: {(TEMP 450)}  cur: {(TEMP obj)}  incomplete:
+(S 0 1)
+(VP (VBD saw) (. .))
+ schema: (VP 451 452)  cur: (VP (VBD saw) (. .) 452)  incomplete: (452, self)
+(S 1 0)
+miscing an unknown category: S[dcl]/NP from S[x]/(S[x]\NP) and (S[dcl]\NP)/NP
+Misc Binary schema:
+ schema: (NP 454 455)  cur: (NP 454 455)  incomplete: (454, self) (455, self)
+{(TEMP 0)}
+(NP 0 1)
+(S 0)
+resolved: (NP (NP (PRP she)) (VP (VBD saw) (. .)))
+ schema: (NP 454 455)  cur: (NP obj obj)  incomplete:
+{(TEMP 0)}
+(NP 0 1)
+(S 0)
+
+using fa.f combiantor rule
+(WHNP (WP what))
+ schema: (WHNP 448)  cur: (WHNP (WP what))  incomplete:
+(SBAR 0 1)
+(NP (NP (PRP she)) (VP (VBD saw) (. .)))
+ schema: (NP 454 455)  cur: (NP obj obj)  incomplete:
+{(TEMP 0)}
+(NP 0 1)
+(S 0)
+resolved: (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .))))
+ schema: (SBAR 456 457)  cur: (SBAR obj obj)  incomplete:
+
+using fa.f combiantor rule
+(PP (IN with))
+ schema: (PP 446 447)  cur: (PP (IN with) 447)  incomplete: (447, self)
+(SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .))))
+ schema: (SBAR 456 457)  cur: (SBAR obj obj)  incomplete:
+resolved: (PP (IN with) (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .)))))
+ schema: (PP 446 447)  cur: (PP (IN with) obj)  incomplete:
+
+using fa.f combiantor rule
+(VP (VBN impressed))
+ schema: (VP 444 445)  cur: (VP (VBN impressed) 445)  incomplete: (445, self)
+(S 1 0)
+(PP (IN with) (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .)))))
+ schema: (PP 446 447)  cur: (PP (IN with) obj)  incomplete:
+resolved: (VP (VBN impressed) (PP (IN with) (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .))))))
+ schema: (VP 444 445)  cur: (VP (VBN impressed) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBD was))
+ schema: (VP 442 443)  cur: (VP (VBD was) 443)  incomplete: (443, self)
+(S 1 0)
+(VP (VBN impressed) (PP (IN with) (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .))))))
+ schema: (VP 444 445)  cur: (VP (VBN impressed) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBD was) (VP (VBN impressed) (PP (IN with) (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .)))))))
+ schema: (VP 442 443)  cur: (VP (VBD was) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Mary))
+ schema: (NP {441})  cur: (NP (NNP Mary))  incomplete:
+(VP (VBD was) (VP (VBN impressed) (PP (IN with) (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .)))))))
+ schema: (VP 442 443)  cur: (VP (VBD was) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Mary)) (VP (VBD was) (VP (VBN impressed) (PP (IN with) (SBAR (WHNP (WP what)) (NP (NP (PRP she)) (VP (VBD saw) (. .))))))))
+ schema: (S 458 459)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Mary))
+		(VP
+			(VBD was)
+			(VP
+				(VBN impressed)
+				(PP
+					(IN with)
+					(SBAR
+						(WHNP
+							(WP what))
+						(NP
+							(NP
+								(PRP she))
+							(VP
+								(VBD saw)
+								(. .)))))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Mary))
+		(VP
+			(VBD was)
+			(VP
+				(VBN impressed)
+				(PP
+					(IN with)
+					(SBAR
+						(WHNP
+							(WP what))
+						(NP
+							(NP
+								(PRP she))
+							(VP
+								(VBD saw)
+								(. .)))))))))
+
+using lex combiantor rule
+resolved: (N (NNP Betty))
+ schema: (N 460)  cur: (N (NNP Betty))  incomplete:
+
+using unary combiantor rule
+(N (NNP Betty))
+ schema: (N 460)  cur: (N (NNP Betty))  incomplete:
+Unary schema:
+ schema: (NP {461})  cur: (NP {461})  incomplete: ({461}, self)
+resolved: (NP (NNP Betty))
+ schema: (NP {461})  cur: (NP (NNP Betty))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBN murdered))
+ schema: (VP 462 463)  cur: (VP (VBN murdered) 463)  incomplete: (463, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (PRP him))
+ schema: (NP 464)  cur: (NP (PRP him))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 465)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (PRP him))
+ schema: (NP 464)  cur: (NP (PRP him))  incomplete:
+(. .)
+ schema: {(. 465)}  cur: {(. (. .))}  incomplete:
+him .
+resolved: (NP (PRP him) (. .))
+ schema: (NP 464)  cur: (NP (PRP him) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBN murdered))
+ schema: (VP 462 463)  cur: (VP (VBN murdered) 463)  incomplete: (463, self)
+(S 1 0)
+(NP (PRP him) (. .))
+ schema: (NP 464)  cur: (NP (PRP him) (. .))  incomplete:
+resolved: (VP (VBN murdered) (NP (PRP him) (. .)))
+ schema: (VP 462 463)  cur: (VP (VBN murdered) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Betty))
+ schema: (NP {461})  cur: (NP (NNP Betty))  incomplete:
+(VP (VBN murdered) (NP (PRP him) (. .)))
+ schema: (VP 462 463)  cur: (VP (VBN murdered) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Betty)) (VP (VBN murdered) (NP (PRP him) (. .))))
+ schema: (S 466 467)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Betty))
+		(VP
+			(VBN murdered)
+			(NP
+				(PRP him)
+				(. .)))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Betty))
+		(VP
+			(VBN murdered)
+			(NP
+				(PRP him)
+				(. .)))))
+
+using lex combiantor rule
+resolved: (NP (EX There))
+ schema: (NP 468)  cur: (NP (EX There))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBP are))
+ schema: (VP 469 470)  cur: (VP (VBP are) 470)  incomplete: (470, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (ADVP (RB also))
+ schema: (ADVP 471)  cur: (ADVP (RB also))  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using cc.b combiantor rule
+(VP (VBP are))
+ schema: (VP 469 470)  cur: (VP (VBP are) 470)  incomplete: (470, self)
+(S 1 0)
+(ADVP (RB also))
+ schema: (ADVP 471)  cur: (ADVP (RB also))  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBP are) (ADVP (RB also)))
+ schema: (VP 469 470)  cur: (VP (VBP are) obj 470)  incomplete: (470, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (Nslash (JJ French))
+ schema: (Nslash 474)  cur: (Nslash (JJ French))  incomplete:
+(N {0} {1}) POS:default
+
+using lex combiantor rule
+resolved: (N (NNS tourists))
+ schema: (N 475)  cur: (N (NNS tourists))  incomplete:
+
+using fa.f combiantor rule
+(Nslash (JJ French))
+ schema: (Nslash 474)  cur: (Nslash (JJ French))  incomplete:
+(N {0} {1}) POS:default
+(N (NNS tourists))
+ schema: (N 475)  cur: (N (NNS tourists))  incomplete:
+resolved: (N (JJ French) (NNS tourists))
+ schema: (N {476} {477})  cur: (N (JJ French) (NNS tourists))  incomplete:
+
+using unary combiantor rule
+(N (JJ French) (NNS tourists))
+ schema: (N {476} {477})  cur: (N (JJ French) (NNS tourists))  incomplete:
+Unary schema:
+ schema: (NP {478})  cur: (NP {478})  incomplete: ({478}, self)
+resolved: (NP (JJ French) (NNS tourists))
+ schema: (NP {478})  cur: (NP (JJ French) (NNS tourists))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 479)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (JJ French) (NNS tourists))
+ schema: (NP {478})  cur: (NP (JJ French) (NNS tourists))  incomplete:
+(. .)
+ schema: {(. 479)}  cur: {(. (. .))}  incomplete:
+French .
+resolved: (NP (JJ French) (NNS tourists) (. .))
+ schema: (NP {478})  cur: (NP (JJ French) (NNS tourists) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBP are) (ADVP (RB also)))
+ schema: (VP 469 470)  cur: (VP (VBP are) obj 470)  incomplete: (470, self)
+(S 1 0)
+(NP (JJ French) (NNS tourists) (. .))
+ schema: (NP {478})  cur: (NP (JJ French) (NNS tourists) (. .))  incomplete:
+resolved: (VP (VBP are) (ADVP (RB also)) (NP (JJ French) (NNS tourists) (. .)))
+ schema: (VP 469 470)  cur: (VP (VBP are) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (EX There))
+ schema: (NP 468)  cur: (NP (EX There))  incomplete:
+(VP (VBP are) (ADVP (RB also)) (NP (JJ French) (NNS tourists) (. .)))
+ schema: (VP 469 470)  cur: (VP (VBP are) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (EX There)) (VP (VBP are) (ADVP (RB also)) (NP (JJ French) (NNS tourists) (. .))))
+ schema: (S 480 481)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(EX There))
+		(VP
+			(VBP are)
+			(ADVP
+				(RB also))
+			(NP
+				(JJ French)
+				(NNS tourists)
+				(. .)))))
+cleaned: (ROOT
+	(S
+		(NP
+			(EX There))
+		(VP
+			(VBP are)
+			(ADVP
+				(RB also))
+			(NP
+				(JJ French)
+				(NNS tourists)
+				(. .)))))
+
+using lex combiantor rule
+resolved: (NP (PRP You))
+ schema: (NP 482)  cur: (NP (PRP You))  incomplete:
+
+using lex combiantor rule
+resolved: (VBP \re)
+ schema: {(TEMP 483)}  cur: {(TEMP (VBP \re))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (RB very)
+ schema: {(TEMP 484)}  cur: {(TEMP (RB very))}  incomplete:
+(ADJP 0 {1})
+(S 1 0)
+
+using lex combiantor rule
+resolved: (JJ sexy)
+ schema: {(TEMP 485)}  cur: {(TEMP (JJ sexy))}  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(RB very)
+ schema: {(TEMP 484)}  cur: {(TEMP (RB very))}  incomplete:
+(ADJP 0 {1})
+(S 1 0)
+(JJ sexy)
+ schema: {(TEMP 485)}  cur: {(TEMP (JJ sexy))}  incomplete:
+(S 1 0)
+resolved: (ADJP (RB very) (JJ sexy))
+ schema: (ADJP 486 {487})  cur: (ADJP (RB very) (JJ sexy))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VBP \re)
+ schema: {(TEMP 483)}  cur: {(TEMP (VBP \re))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+(ADJP (RB very) (JJ sexy))
+ schema: (ADJP 486 {487})  cur: (ADJP (RB very) (JJ sexy))  incomplete:
+(S 1 0)
+resolved: (VP (VBP \re) (ADJP (ADJP (RB very) (JJ sexy))))
+ schema: (VP 488 (ADJP 489))  cur: (VP (VBP \re) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 490)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (VBP \re) (ADJP (ADJP (RB very) (JJ sexy))))
+ schema: (VP 488 (ADJP 489))  cur: (VP (VBP \re) obj)  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 490)}  cur: {(. (. .))}  incomplete:
+\re .
+resolved: (VP (VBP \re) (ADJP (ADJP (RB very) (JJ sexy))) (. .))
+ schema: (VP 488 (ADJP 489))  cur: (VP (VBP \re) obj (. .))  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP You))
+ schema: (NP 482)  cur: (NP (PRP You))  incomplete:
+(VP (VBP \re) (ADJP (ADJP (RB very) (JJ sexy))) (. .))
+ schema: (VP 488 (ADJP 489))  cur: (VP (VBP \re) obj (. .))  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP You)) (VP (VBP \re) (ADJP (ADJP (RB very) (JJ sexy))) (. .)))
+ schema: (S 491 492)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP You))
+		(VP
+			(VBP \re)
+			(ADJP
+				(ADJP
+					(RB very)
+					(JJ sexy)))
+			(. .))))
+duplicate!
+(ADJP (ADJP (RB very) (JJ sexy)))
+(ADJP (RB very) (JJ sexy))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP You))
+		(VP
+			(VBP \re)
+			(ADJP
+				(RB very)
+				(JJ sexy))
+			(. .))))
+
+using lex combiantor rule
+Unannotated category: (S[wq]/(S[q]/(S[adj]\NP)))/(S[adj]\NP)
+resolved: (NP (WRB How))
+ schema: (NP 493 494)  cur: (NP (WRB How) 494)  incomplete: (494, self)
+(NP 0 1)
+(S 0)
+
+using lex combiantor rule
+resolved: (JJ tall)
+ schema: {(TEMP 495)}  cur: {(TEMP (JJ tall))}  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(NP (WRB How))
+ schema: (NP 493 494)  cur: (NP (WRB How) 494)  incomplete: (494, self)
+(NP 0 1)
+(S 0)
+(JJ tall)
+ schema: {(TEMP 495)}  cur: {(TEMP (JJ tall))}  incomplete:
+(S 1 0)
+resolved: (NP (WRB How) (JJ tall))
+ schema: (NP 493 494)  cur: (NP (WRB How) (JJ tall))  incomplete:
+(NP 0 1)
+(S 0)
+
+using lex combiantor rule
+resolved: (VP (VBZ is))
+ schema: (VP 496 497)  cur: (VP (VBZ is) 497)  incomplete: (497, self)
+(VP {0} 1) arg:ADVP:
+(VP {0} (ADJP 1)) arg:default:
+
+using lex combiantor rule
+resolved: (NP (DT the))
+ schema: (NP 498 {499})  cur: (NP (DT the) {499})  incomplete: ({499}, self)
+
+using lex combiantor rule
+resolved: (N (NNP Alto~Cruz~de~la~Demanda))
+ schema: (N 500)  cur: (N (NNP Alto~Cruz~de~la~Demanda))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT the))
+ schema: (NP 498 {499})  cur: (NP (DT the) {499})  incomplete: ({499}, self)
+(N (NNP Alto~Cruz~de~la~Demanda))
+ schema: (N 500)  cur: (N (NNP Alto~Cruz~de~la~Demanda))  incomplete:
+resolved: (NP (DT the) (NNP Alto~Cruz~de~la~Demanda))
+ schema: (NP 498 {499})  cur: (NP (DT the) (NNP Alto~Cruz~de~la~Demanda))  incomplete:
+
+using lex combiantor rule
+resolved: (. ?)
+ schema: {(. 501)}  cur: {(. (. ?))}  incomplete:
+
+using misc combiantor rule
+(NP (DT the) (NNP Alto~Cruz~de~la~Demanda))
+ schema: (NP 498 {499})  cur: (NP (DT the) (NNP Alto~Cruz~de~la~Demanda))  incomplete:
+(. ?)
+ schema: {(. 501)}  cur: {(. (. ?))}  incomplete:
+the ?
+resolved: (NP (DT the) (NNP Alto~Cruz~de~la~Demanda) (. ?))
+ schema: (NP 498 {499})  cur: (NP (DT the) (NNP Alto~Cruz~de~la~Demanda) (. ?))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBZ is))
+ schema: (VP 496 497)  cur: (VP (VBZ is) 497)  incomplete: (497, self)
+(VP {0} 1) arg:ADVP:
+(VP {0} (ADJP 1)) arg:default:
+(NP (DT the) (NNP Alto~Cruz~de~la~Demanda) (. ?))
+ schema: (NP 498 {499})  cur: (NP (DT the) (NNP Alto~Cruz~de~la~Demanda) (. ?))  incomplete:
+resolved: (VP (VBZ is) (NP (DT the) (NNP Alto~Cruz~de~la~Demanda) (. ?)))
+ schema: (VP 496 497)  cur: (VP (VBZ is) obj)  incomplete:
+(VP {0} 1) arg:ADVP:
+(VP {0} (ADJP 1)) arg:default:
+
+using fa.f combiantor rule
+(NP (WRB How) (JJ tall))
+ schema: (NP 493 494)  cur: (NP (WRB How) (JJ tall))  incomplete:
+(NP 0 1)
+(S 0)
+(VP (VBZ is) (NP (DT the) (NNP Alto~Cruz~de~la~Demanda) (. ?)))
+ schema: (VP 496 497)  cur: (VP (VBZ is) obj)  incomplete:
+(VP {0} 1) arg:ADVP:
+(VP {0} (ADJP 1)) arg:default:
+resolved: (NP (NP (WRB How) (JJ tall)) (VP (VBZ is) (NP (DT the) (NNP Alto~Cruz~de~la~Demanda) (. ?))))
+ schema: (NP 502 503)  cur: (NP obj obj)  incomplete:
+(S 0)
+
+before cleaning: (ROOT
+	(NP
+		(NP
+			(WRB How)
+			(JJ tall))
+		(VP
+			(VBZ is)
+			(NP
+				(DT the)
+				(NNP Alto~Cruz~de~la~Demanda)
+				(. ?)))))
+cleaned: (ROOT
+	(NP
+		(NP
+			(WRB How)
+			(JJ tall))
+		(VP
+			(VBZ is)
+			(NP
+				(DT the)
+				(NNP Alto~Cruz~de~la~Demanda)
+				(. ?)))))
+
+using lex combiantor rule
+resolved: (WHADVP (WRB How))
+ schema: (WHADVP 504)  cur: (WHADVP (WRB How))  incomplete:
+(S 0 1)
+
+using lex combiantor rule
+resolved: (SQ (VBD did))
+ schema: (SQ 505 506)  cur: (SQ (VBD did) 506)  incomplete: (506, self)
 (SQ {0} 1)
 
 using lex combiantor rule
-resolved: (VP (VB belong))
- schema: (VP 106 107)  cur: (VP (VB belong) 107)  incomplete: (107, self)
+resolved: (N (NNP Harry~Houdini))
+ schema: (N 507)  cur: (N (NNP Harry~Houdini))  incomplete:
+
+using unary combiantor rule
+(N (NNP Harry~Houdini))
+ schema: (N 507)  cur: (N (NNP Harry~Houdini))  incomplete:
+Unary schema:
+ schema: (NP {508})  cur: (NP {508})  incomplete: ({508}, self)
+resolved: (NP (NNP Harry~Houdini))
+ schema: (NP {508})  cur: (NP (NNP Harry~Houdini))  incomplete:
+
+using fa.f combiantor rule
+(SQ (VBD did))
+ schema: (SQ 505 506)  cur: (SQ (VBD did) 506)  incomplete: (506, self)
+(SQ {0} 1)
+(NP (NNP Harry~Houdini))
+ schema: (NP {508})  cur: (NP (NNP Harry~Houdini))  incomplete:
+resolved: (SQ (VBD did) (NP (NNP Harry~Houdini)))
+ schema: (SQ 505 506)  cur: (SQ (VBD did) obj)  incomplete:
+(SQ {0} 1)
+
+using lex combiantor rule
+resolved: (VP (VB die))
+ schema: (VP 509)  cur: (VP (VB die))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. ?)
+ schema: {(. 510)}  cur: {(. (. ?))}  incomplete:
+
+using misc combiantor rule
+(VP (VB die))
+ schema: (VP 509)  cur: (VP (VB die))  incomplete:
+(S 1 0)
+(. ?)
+ schema: {(. 510)}  cur: {(. (. ?))}  incomplete:
+die ?
+resolved: (VP (VB die) (. ?))
+ schema: (VP 509)  cur: (VP (VB die) (. ?))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(SQ (VBD did) (NP (NNP Harry~Houdini)))
+ schema: (SQ 505 506)  cur: (SQ (VBD did) obj)  incomplete:
+(SQ {0} 1)
+(VP (VB die) (. ?))
+ schema: (VP 509)  cur: (VP (VB die) (. ?))  incomplete:
+(S 1 0)
+resolved: (SQ (VBD did) (NP (NNP Harry~Houdini)) (VP (VB die) (. ?)))
+ schema: (SQ {511} 512)  cur: (SQ (VBD did) obj obj)  incomplete:
+
+using fa.f combiantor rule
+(WHADVP (WRB How))
+ schema: (WHADVP 504)  cur: (WHADVP (WRB How))  incomplete:
+(S 0 1)
+(SQ (VBD did) (NP (NNP Harry~Houdini)) (VP (VB die) (. ?)))
+ schema: (SQ {511} 512)  cur: (SQ (VBD did) obj obj)  incomplete:
+resolved: (S (WHADVP (WRB How)) (SQ (VBD did) (NP (NNP Harry~Houdini)) (VP (VB die) (. ?))))
+ schema: (S 513 514)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(WHADVP
+			(WRB How))
+		(SQ
+			(VBD did)
+			(NP
+				(NNP Harry~Houdini))
+			(VP
+				(VB die)
+				(. ?)))))
+cleaned: (ROOT
+	(S
+		(WHADVP
+			(WRB How))
+		(SQ
+			(VBD did)
+			(NP
+				(NNP Harry~Houdini))
+			(VP
+				(VB die)
+				(. ?)))))
+
+using lex combiantor rule
+resolved: (N (NNP Tom))
+ schema: (N 515)  cur: (N (NNP Tom))  incomplete:
+
+using unary combiantor rule
+(N (NNP Tom))
+ schema: (N 515)  cur: (N (NNP Tom))  incomplete:
+Unary schema:
+ schema: (NP {516})  cur: (NP {516})  incomplete: ({516}, self)
+resolved: (NP (NNP Tom))
+ schema: (NP {516})  cur: (NP (NNP Tom))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (MD ca))
+ schema: (VP 517 518)  cur: (VP (MD ca) 518)  incomplete: (518, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (ADVP (RB n\t))
+ schema: (ADVP 519)  cur: (ADVP (RB n\t))  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using cc.b combiantor rule
+(VP (MD ca))
+ schema: (VP 517 518)  cur: (VP (MD ca) 518)  incomplete: (518, self)
+(S 1 0)
+(ADVP (RB n\t))
+ schema: (ADVP 519)  cur: (ADVP (RB n\t))  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (MD ca) (ADVP (RB n\t)))
+ schema: (VP 517 518)  cur: (VP (MD ca) obj 518)  incomplete: (518, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VB drive))
+ schema: (VP 522)  cur: (VP (VB drive))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (ADVP (RB yet))
+ schema: (ADVP 523)  cur: (ADVP (RB yet))  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 524)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(ADVP (RB yet))
+ schema: (ADVP 523)  cur: (ADVP (RB yet))  incomplete:
+(VP {1} 0)
+(S 1 0)
+(. .)
+ schema: {(. 524)}  cur: {(. (. .))}  incomplete:
+yet .
+resolved: (ADVP (RB yet) (. .))
+ schema: (ADVP 523)  cur: (ADVP (RB yet) (. .))  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VB drive))
+ schema: (VP 522)  cur: (VP (VB drive))  incomplete:
+(S 1 0)
+(ADVP (RB yet) (. .))
+ schema: (ADVP 523)  cur: (ADVP (RB yet) (. .))  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VB drive) (ADVP (RB yet) (. .)))
+ schema: (VP {525} 526)  cur: (VP (VB drive) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (MD ca) (ADVP (RB n\t)))
+ schema: (VP 517 518)  cur: (VP (MD ca) obj 518)  incomplete: (518, self)
+(S 1 0)
+(VP (VB drive) (ADVP (RB yet) (. .)))
+ schema: (VP {525} 526)  cur: (VP (VB drive) obj)  incomplete:
+(S 1 0)
+resolved: (VP (MD ca) (ADVP (RB n\t)) (VP (VB drive) (ADVP (RB yet) (. .))))
+ schema: (VP 517 518)  cur: (VP (MD ca) obj obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Tom))
+ schema: (NP {516})  cur: (NP (NNP Tom))  incomplete:
+(VP (MD ca) (ADVP (RB n\t)) (VP (VB drive) (ADVP (RB yet) (. .))))
+ schema: (VP 517 518)  cur: (VP (MD ca) obj obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Tom)) (VP (MD ca) (ADVP (RB n\t)) (VP (VB drive) (ADVP (RB yet) (. .)))))
+ schema: (S 527 528)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Tom))
+		(VP
+			(MD ca)
+			(ADVP
+				(RB n\t))
+			(VP
+				(VB drive)
+				(ADVP
+					(RB yet)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Tom))
+		(VP
+			(MD ca)
+			(ADVP
+				(RB n\t))
+			(VP
+				(VB drive)
+				(ADVP
+					(RB yet)
+					(. .))))))
+
+using lex combiantor rule
+Missing category: NP/(N/PP) asked for by lex
+resolved: (NP (PRP$ My))
+ schema: (NP 529 530)  cur: (NP (PRP$ My) 530)  incomplete: (530, self)
+(NP 0)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN name))
+ schema: (NP 531 532)  cur: (NP (NN name) 532)  incomplete: (532, self)
+(N 0)
+
+using fa.f combiantor rule
+(NP (PRP$ My))
+ schema: (NP 529 530)  cur: (NP (PRP$ My) 530)  incomplete: (530, self)
+(NP 0)
+(NP (NN name))
+ schema: (NP 531 532)  cur: (NP (NN name) 532)  incomplete: (532, self)
+(N 0)
+resolved: (NP (PRP$ My) (NP (NN name)))
+ schema: (NP 529 530)  cur: (NP (PRP$ My) obj)  incomplete:
+(NP 0)
+
+using lex combiantor rule
+resolved: (VP (VBZ is))
+ schema: (VP 533 534)  cur: (VP (VBZ is) 534)  incomplete: (534, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (NNP Robert~Johnson))
+ schema: (NP 535)  cur: (NP (NNP Robert~Johnson))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 536)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NNP Robert~Johnson))
+ schema: (NP 535)  cur: (NP (NNP Robert~Johnson))  incomplete:
+(. .)
+ schema: {(. 536)}  cur: {(. (. .))}  incomplete:
+Robert~Johnson .
+resolved: (NP (NNP Robert~Johnson) (. .))
+ schema: (NP 535)  cur: (NP (NNP Robert~Johnson) (. .))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBZ is))
+ schema: (VP 533 534)  cur: (VP (VBZ is) 534)  incomplete: (534, self)
+(S 1 0)
+(NP (NNP Robert~Johnson) (. .))
+ schema: (NP 535)  cur: (NP (NNP Robert~Johnson) (. .))  incomplete:
+resolved: (VP (VBZ is) (NP (NNP Robert~Johnson) (. .)))
+ schema: (VP 533 534)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP$ My) (NP (NN name)))
+ schema: (NP 529 530)  cur: (NP (PRP$ My) obj)  incomplete:
+(NP 0)
+(VP (VBZ is) (NP (NNP Robert~Johnson) (. .)))
+ schema: (VP 533 534)  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP$ My) (NP (NN name))) (VP (VBZ is) (NP (NNP Robert~Johnson) (. .))))
+ schema: (S 537 538)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP$ My)
+			(NP
+				(NN name)))
+		(VP
+			(VBZ is)
+			(NP
+				(NNP Robert~Johnson)
+				(. .)))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP$ My)
+			(NP
+				(NN name)))
+		(VP
+			(VBZ is)
+			(NP
+				(NNP Robert~Johnson)
+				(. .)))))
+
+using lex combiantor rule
+resolved: (NP (PRP I))
+ schema: (NP 539)  cur: (NP (PRP I))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBP go))
+ schema: (VP 540 541)  cur: (VP (VBP go) 541)  incomplete: (541, self)
 (S 1 0)
 
 using lex combiantor rule
 resolved: (PP (TO to))
- schema: (PP 108 109)  cur: (PP (TO to) 109)  incomplete: (109, self)
+ schema: (PP 542 543)  cur: (PP (TO to) 543)  incomplete: (543, self)
 
 using lex combiantor rule
-resolved: (. ?)
- schema: {(. 110)}  cur: {(. (. ?))}  incomplete:
+resolved: (NP (DT the))
+ schema: (NP 544 {545})  cur: (NP (DT the) {545})  incomplete: ({545}, self)
 
-using misc combiantor rule
-(PP (TO to))
- schema: (PP 108 109)  cur: (PP (TO to) 109)  incomplete: (109, self)
-(. ?)
- schema: {(. 110)}  cur: {(. (. ?))}  incomplete:
-to ?
-resolved: (PP (TO to) (. ?))
- schema: (PP 108 109)  cur: (PP (TO to) (. ?) 109)  incomplete: (109, self)
-
-using fc.f combiantor rule
-(VP (VB belong))
- schema: (VP 106 107)  cur: (VP (VB belong) 107)  incomplete: (107, self)
-(S 1 0)
-(PP (TO to) (. ?))
- schema: (PP 108 109)  cur: (PP (TO to) (. ?) 109)  incomplete: (109, self)
-resolved: (VP (VB belong) (PP (TO to) (. ?)))
- schema: (VP 106 107)  cur: (VP (VB belong) obj)  incomplete: (109, other)
-(S 1 0)
-
-using fc.f combiantor rule
-(SQ (VBZ does) (NP (DT this) (NN guitar)))
- schema: (SQ 101 102)  cur: (SQ (VBZ does) obj)  incomplete:
-(SQ {0} 1)
-(VP (VB belong) (PP (TO to) (. ?)))
- schema: (VP 106 107)  cur: (VP (VB belong) obj)  incomplete: (109, other)
-(S 1 0)
-resolved: (SQ (VBZ does) (NP (DT this) (NN guitar)) (VP (VB belong) (PP (TO to) (. ?))))
- schema: (SQ {111} 112)  cur: (SQ (VBZ does) obj obj)  incomplete: (109, other)
+using lex combiantor rule
+resolved: (N (NN market))
+ schema: (N 546)  cur: (N (NN market))  incomplete:
 
 using fa.f combiantor rule
-(WHNP (WP Who))
- schema: (WHNP 100)  cur: (WHNP (WP Who))  incomplete:
-(SBARQ 0 1)
-(SQ (VBZ does) (NP (DT this) (NN guitar)) (VP (VB belong) (PP (TO to) (. ?))))
- schema: (SQ {111} 112)  cur: (SQ (VBZ does) obj obj)  incomplete: (109, other)
-resolved: (SBARQ (WHNP (WP Who)) (SQ (VBZ does) (NP (DT this) (NN guitar)) (VP (VB belong) (PP (TO to) (. ?)))))
- schema: (SBARQ 113 114)  cur: (SBARQ obj obj)  incomplete:
+(NP (DT the))
+ schema: (NP 544 {545})  cur: (NP (DT the) {545})  incomplete: ({545}, self)
+(N (NN market))
+ schema: (N 546)  cur: (N (NN market))  incomplete:
+resolved: (NP (DT the) (NN market))
+ schema: (NP 544 {545})  cur: (NP (DT the) (NN market))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 547)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (DT the) (NN market))
+ schema: (NP 544 {545})  cur: (NP (DT the) (NN market))  incomplete:
+(. .)
+ schema: {(. 547)}  cur: {(. (. .))}  incomplete:
+the .
+resolved: (NP (DT the) (NN market) (. .))
+ schema: (NP 544 {545})  cur: (NP (DT the) (NN market) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (TO to))
+ schema: (PP 542 543)  cur: (PP (TO to) 543)  incomplete: (543, self)
+(NP (DT the) (NN market) (. .))
+ schema: (NP 544 {545})  cur: (NP (DT the) (NN market) (. .))  incomplete:
+resolved: (PP (TO to) (NP (DT the) (NN market) (. .)))
+ schema: (PP 542 543)  cur: (PP (TO to) obj)  incomplete:
+
+using fa.f combiantor rule
+(VP (VBP go))
+ schema: (VP 540 541)  cur: (VP (VBP go) 541)  incomplete: (541, self)
+(S 1 0)
+(PP (TO to) (NP (DT the) (NN market) (. .)))
+ schema: (PP 542 543)  cur: (PP (TO to) obj)  incomplete:
+resolved: (VP (VBP go) (PP (TO to) (NP (DT the) (NN market) (. .))))
+ schema: (VP 540 541)  cur: (VP (VBP go) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP I))
+ schema: (NP 539)  cur: (NP (PRP I))  incomplete:
+(VP (VBP go) (PP (TO to) (NP (DT the) (NN market) (. .))))
+ schema: (VP 540 541)  cur: (VP (VBP go) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP I)) (VP (VBP go) (PP (TO to) (NP (DT the) (NN market) (. .)))))
+ schema: (S 548 549)  cur: (S obj obj)  incomplete:
 
 before cleaning: (ROOT
-	(SBARQ
-		(WHNP
-			(WP Who))
-		(SQ
-			(VBZ does)
-			(NP
-				(DT this)
-				(NN guitar))
-			(VP
-				(VB belong)
-				(PP
-					(TO to)
-					(. ?))))))
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBP go)
+			(PP
+				(TO to)
+				(NP
+					(DT the)
+					(NN market)
+					(. .))))))
 cleaned: (ROOT
-	(SBARQ
-		(WHNP
-			(WP Who))
-		(SQ
-			(VBZ does)
+	(S
+		(NP
+			(PRP I))
+		(VP
+			(VBP go)
+			(PP
+				(TO to)
+				(NP
+					(DT the)
+					(NN market)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (DT This))
+ schema: (NP 550 {551})  cur: (NP (DT This) {551})  incomplete: ({551}, self)
+
+using lex combiantor rule
+resolved: (N (NN lawn~mower))
+ schema: (N 552)  cur: (N (NN lawn~mower))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT This))
+ schema: (NP 550 {551})  cur: (NP (DT This) {551})  incomplete: ({551}, self)
+(N (NN lawn~mower))
+ schema: (N 552)  cur: (N (NN lawn~mower))  incomplete:
+resolved: (NP (DT This) (NN lawn~mower))
+ schema: (NP 550 {551})  cur: (NP (DT This) (NN lawn~mower))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ runs))
+ schema: (VP 553)  cur: (VP (VBZ runs))  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN on))
+ schema: (PP 554 555)  cur: (PP (IN on) 555)  incomplete: (555, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NN petrol))
+ schema: (N 556)  cur: (N (NN petrol))  incomplete:
+
+using unary combiantor rule
+(N (NN petrol))
+ schema: (N 556)  cur: (N (NN petrol))  incomplete:
+Unary schema:
+ schema: (NP {557})  cur: (NP {557})  incomplete: ({557}, self)
+resolved: (NP (NN petrol))
+ schema: (NP {557})  cur: (NP (NN petrol))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 558)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NN petrol))
+ schema: (NP {557})  cur: (NP (NN petrol))  incomplete:
+(. .)
+ schema: {(. 558)}  cur: {(. (. .))}  incomplete:
+petrol .
+resolved: (NP (NN petrol) (. .))
+ schema: (NP {557})  cur: (NP (NN petrol) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN on))
+ schema: (PP 554 555)  cur: (PP (IN on) 555)  incomplete: (555, self)
+(VP {1} 0)
+(S 1 0)
+(NP (NN petrol) (. .))
+ schema: (NP {557})  cur: (NP (NN petrol) (. .))  incomplete:
+resolved: (PP (IN on) (NP (NN petrol) (. .)))
+ schema: (PP 554 555)  cur: (PP (IN on) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using fa.b combiantor rule
+(VP (VBZ runs))
+ schema: (VP 553)  cur: (VP (VBZ runs))  incomplete:
+(S 1 0)
+(PP (IN on) (NP (NN petrol) (. .)))
+ schema: (PP 554 555)  cur: (PP (IN on) obj)  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBZ runs) (PP (IN on) (NP (NN petrol) (. .))))
+ schema: (VP {559} 560)  cur: (VP (VBZ runs) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (DT This) (NN lawn~mower))
+ schema: (NP 550 {551})  cur: (NP (DT This) (NN lawn~mower))  incomplete:
+(VP (VBZ runs) (PP (IN on) (NP (NN petrol) (. .))))
+ schema: (VP {559} 560)  cur: (VP (VBZ runs) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (DT This) (NN lawn~mower)) (VP (VBZ runs) (PP (IN on) (NP (NN petrol) (. .)))))
+ schema: (S 561 562)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(DT This)
+			(NN lawn~mower))
+		(VP
+			(VBZ runs)
+			(PP
+				(IN on)
+				(NP
+					(NN petrol)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(DT This)
+			(NN lawn~mower))
+		(VP
+			(VBZ runs)
+			(PP
+				(IN on)
+				(NP
+					(NN petrol)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (N (NNP Tom))
+ schema: (N 563)  cur: (N (NNP Tom))  incomplete:
+
+using unary combiantor rule
+(N (NNP Tom))
+ schema: (N 563)  cur: (N (NNP Tom))  incomplete:
+Unary schema:
+ schema: (NP {564})  cur: (NP {564})  incomplete: ({564}, self)
+resolved: (NP (NNP Tom))
+ schema: (NP {564})  cur: (NP (NNP Tom))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (NN swam))
+ schema: (VP 565 566)  cur: (VP (NN swam) 566)  incomplete: (566, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN in))
+ schema: (PP 567 568)  cur: (PP (IN in) 568)  incomplete: (568, self)
+
+using lex combiantor rule
+resolved: (NP (DT the))
+ schema: (NP 569 {570})  cur: (NP (DT the) {570})  incomplete: ({570}, self)
+
+using lex combiantor rule
+resolved: (N (NN river))
+ schema: (N 571)  cur: (N (NN river))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT the))
+ schema: (NP 569 {570})  cur: (NP (DT the) {570})  incomplete: ({570}, self)
+(N (NN river))
+ schema: (N 571)  cur: (N (NN river))  incomplete:
+resolved: (NP (DT the) (NN river))
+ schema: (NP 569 {570})  cur: (NP (DT the) (NN river))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 572)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (DT the) (NN river))
+ schema: (NP 569 {570})  cur: (NP (DT the) (NN river))  incomplete:
+(. .)
+ schema: {(. 572)}  cur: {(. (. .))}  incomplete:
+the .
+resolved: (NP (DT the) (NN river) (. .))
+ schema: (NP 569 {570})  cur: (NP (DT the) (NN river) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (IN in))
+ schema: (PP 567 568)  cur: (PP (IN in) 568)  incomplete: (568, self)
+(NP (DT the) (NN river) (. .))
+ schema: (NP 569 {570})  cur: (NP (DT the) (NN river) (. .))  incomplete:
+resolved: (PP (IN in) (NP (DT the) (NN river) (. .)))
+ schema: (PP 567 568)  cur: (PP (IN in) obj)  incomplete:
+
+using fa.f combiantor rule
+(VP (NN swam))
+ schema: (VP 565 566)  cur: (VP (NN swam) 566)  incomplete: (566, self)
+(S 1 0)
+(PP (IN in) (NP (DT the) (NN river) (. .)))
+ schema: (PP 567 568)  cur: (PP (IN in) obj)  incomplete:
+resolved: (VP (NN swam) (PP (IN in) (NP (DT the) (NN river) (. .))))
+ schema: (VP 565 566)  cur: (VP (NN swam) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (NNP Tom))
+ schema: (NP {564})  cur: (NP (NNP Tom))  incomplete:
+(VP (NN swam) (PP (IN in) (NP (DT the) (NN river) (. .))))
+ schema: (VP 565 566)  cur: (VP (NN swam) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (NNP Tom)) (VP (NN swam) (PP (IN in) (NP (DT the) (NN river) (. .)))))
+ schema: (S 573 574)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(NNP Tom))
+		(VP
+			(NN swam)
+			(PP
+				(IN in)
+				(NP
+					(DT the)
+					(NN river)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(NNP Tom))
+		(VP
+			(NN swam)
+			(PP
+				(IN in)
+				(NP
+					(DT the)
+					(NN river)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (DT Someone))
+ schema: (NP 575)  cur: (NP (DT Someone))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (NN stole))
+ schema: (VP 576 577)  cur: (VP (NN stole) 577)  incomplete: (577, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNP Tom))
+ schema: (N 578)  cur: (N (NNP Tom))  incomplete:
+
+using unary combiantor rule
+(N (NNP Tom))
+ schema: (N 578)  cur: (N (NNP Tom))  incomplete:
+Unary schema:
+ schema: (NP {579})  cur: (NP {579})  incomplete: ({579}, self)
+resolved: (NP (NNP Tom))
+ schema: (NP {579})  cur: (NP (NNP Tom))  incomplete:
+
+using lex combiantor rule
+Missing category: (NP/(N/PP))\NP asked for by lex
+resolved: (NP (POS \s))
+ schema: (NP 580 581)  cur: (NP 580 (POS \s))  incomplete: (580, self)
+(NP 0 1)
+(NP 0)
+
+using fa.b combiantor rule
+(NP (NNP Tom))
+ schema: (NP {579})  cur: (NP (NNP Tom))  incomplete:
+(NP (POS \s))
+ schema: (NP 580 581)  cur: (NP 580 (POS \s))  incomplete: (580, self)
+(NP 0 1)
+(NP 0)
+resolved: (NP (NP (NNP Tom)) (POS \s))
+ schema: (NP 580 581)  cur: (NP obj (POS \s))  incomplete:
+(NP 0 1)
+(NP 0)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN car))
+ schema: (NP 582 583)  cur: (NP (NN car) 583)  incomplete: (583, self)
+(N 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 584)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (NN car))
+ schema: (NP 582 583)  cur: (NP (NN car) 583)  incomplete: (583, self)
+(N 0)
+(. .)
+ schema: {(. 584)}  cur: {(. (. .))}  incomplete:
+car .
+resolved: (NP (NN car) (. .))
+ schema: (NP 582 583)  cur: (NP (NN car) (. .) 583)  incomplete: (583, self)
+(N 0)
+
+using fa.f combiantor rule
+(NP (NP (NNP Tom)) (POS \s))
+ schema: (NP 580 581)  cur: (NP obj (POS \s))  incomplete:
+(NP 0 1)
+(NP 0)
+(NP (NN car) (. .))
+ schema: (NP 582 583)  cur: (NP (NN car) (. .) 583)  incomplete: (583, self)
+(N 0)
+resolved: (NP (NP (NP (NNP Tom)) (POS \s)) (NP (NN car) (. .)))
+ schema: (NP 585 586)  cur: (NP obj obj)  incomplete:
+(NP 0)
+
+using fa.f combiantor rule
+(VP (NN stole))
+ schema: (VP 576 577)  cur: (VP (NN stole) 577)  incomplete: (577, self)
+(S 1 0)
+(NP (NP (NP (NNP Tom)) (POS \s)) (NP (NN car) (. .)))
+ schema: (NP 585 586)  cur: (NP obj obj)  incomplete:
+(NP 0)
+resolved: (VP (NN stole) (NP (NP (NP (NNP Tom)) (POS \s)) (NP (NN car) (. .))))
+ schema: (VP 576 577)  cur: (VP (NN stole) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (DT Someone))
+ schema: (NP 575)  cur: (NP (DT Someone))  incomplete:
+(VP (NN stole) (NP (NP (NP (NNP Tom)) (POS \s)) (NP (NN car) (. .))))
+ schema: (VP 576 577)  cur: (VP (NN stole) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (DT Someone)) (VP (NN stole) (NP (NP (NP (NNP Tom)) (POS \s)) (NP (NN car) (. .)))))
+ schema: (S 587 588)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(DT Someone))
+		(VP
+			(NN stole)
 			(NP
-				(DT this)
-				(NN guitar))
-			(VP
-				(VB belong)
+				(NP
+					(NP
+						(NNP Tom))
+					(POS \s))
+				(NP
+					(NN car)
+					(. .))))))
+cleaned: (ROOT
+	(S
+		(NP
+			(DT Someone))
+		(VP
+			(NN stole)
+			(NP
+				(NP
+					(NP
+						(NNP Tom))
+					(POS \s))
+				(NP
+					(NN car)
+					(. .))))))
+
+using lex combiantor rule
+resolved: (NP (DT A))
+ schema: (NP 589 {590})  cur: (NP (DT A) {590})  incomplete: ({590}, self)
+
+using lex combiantor rule
+resolved: (N (NN mile))
+ schema: (N 591)  cur: (N (NN mile))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT A))
+ schema: (NP 589 {590})  cur: (NP (DT A) {590})  incomplete: ({590}, self)
+(N (NN mile))
+ schema: (N 591)  cur: (N (NN mile))  incomplete:
+resolved: (NP (DT A) (NN mile))
+ schema: (NP 589 {590})  cur: (NP (DT A) (NN mile))  incomplete:
+
+using lex combiantor rule
+resolved: (VBZ is)
+ schema: {(TEMP 592)}  cur: {(TEMP (VBZ is))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (ADJP (JJ equal))
+ schema: (ADJP 593 594)  cur: (ADJP (JJ equal) 594)  incomplete: (594, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (TO to))
+ schema: (PP 595 596)  cur: (PP (TO to) 596)  incomplete: (596, self)
+
+using lex combiantor rule
+resolved: (N (IN about))
+ schema: (N 597)  cur: (N (IN about))  incomplete:
+(QP {0} {1}) arg:(CD):
+(ADJP {0} {1}) arg:default:
+(N 0 {1})
+
+using lex combiantor rule
+resolved: (Nslash (CD 1600))
+ schema: (Nslash 598)  cur: (Nslash (CD 1600))  incomplete:
+(Nnum {0} {1}) POS:CD,RB
+
+using fa.f combiantor rule
+(N (IN about))
+ schema: (N 597)  cur: (N (IN about))  incomplete:
+(QP {0} {1}) arg:(CD):
+(ADJP {0} {1}) arg:default:
+(N 0 {1})
+(Nslash (CD 1600))
+ schema: (Nslash 598)  cur: (Nslash (CD 1600))  incomplete:
+(Nnum {0} {1}) POS:CD,RB
+resolved: (QP (IN about) (CD 1600))
+ schema: (QP {599} {600})  cur: (QP (IN about) (CD 1600))  incomplete:
+(N 0 {1})
+
+using lex combiantor rule
+resolved: (N (NNS meters))
+ schema: (N 601)  cur: (N (NNS meters))  incomplete:
+
+using fa.f combiantor rule
+(QP (IN about) (CD 1600))
+ schema: (QP {599} {600})  cur: (QP (IN about) (CD 1600))  incomplete:
+(N 0 {1})
+(N (NNS meters))
+ schema: (N 601)  cur: (N (NNS meters))  incomplete:
+resolved: (N (QP (IN about) (CD 1600)) (NNS meters))
+ schema: (N 602 {603})  cur: (N obj (NNS meters))  incomplete:
+
+using unary combiantor rule
+(N (QP (IN about) (CD 1600)) (NNS meters))
+ schema: (N 602 {603})  cur: (N obj (NNS meters))  incomplete:
+Unary schema:
+ schema: (NP {604})  cur: (NP {604})  incomplete: ({604}, self)
+resolved: (NP (QP (IN about) (CD 1600)) (NNS meters))
+ schema: (NP {604})  cur: (NP obj (NNS meters))  incomplete:
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 605)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(NP (QP (IN about) (CD 1600)) (NNS meters))
+ schema: (NP {604})  cur: (NP obj (NNS meters))  incomplete:
+(. .)
+ schema: {(. 605)}  cur: {(. (. .))}  incomplete:
+about .
+resolved: (NP (QP (IN about) (CD 1600)) (NNS meters) (. .))
+ schema: (NP {604})  cur: (NP obj (NNS meters) (. .))  incomplete:
+
+using fa.f combiantor rule
+(PP (TO to))
+ schema: (PP 595 596)  cur: (PP (TO to) 596)  incomplete: (596, self)
+(NP (QP (IN about) (CD 1600)) (NNS meters) (. .))
+ schema: (NP {604})  cur: (NP obj (NNS meters) (. .))  incomplete:
+resolved: (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .)))
+ schema: (PP 595 596)  cur: (PP (TO to) obj)  incomplete:
+
+using fa.f combiantor rule
+(ADJP (JJ equal))
+ schema: (ADJP 593 594)  cur: (ADJP (JJ equal) 594)  incomplete: (594, self)
+(S 1 0)
+(PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .)))
+ schema: (PP 595 596)  cur: (PP (TO to) obj)  incomplete:
+resolved: (ADJP (JJ equal) (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .))))
+ schema: (ADJP 593 594)  cur: (ADJP (JJ equal) obj)  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VBZ is)
+ schema: {(TEMP 592)}  cur: {(TEMP (VBZ is))}  incomplete:
+(VP 0 2) arg:ADVP:
+(VP 0 (ADJP 2)) arg:default:
+(S 1 0)
+(ADJP (JJ equal) (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .))))
+ schema: (ADJP 593 594)  cur: (ADJP (JJ equal) obj)  incomplete:
+(S 1 0)
+resolved: (VP (VBZ is) (ADJP (ADJP (JJ equal) (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .))))))
+ schema: (VP 606 (ADJP 607))  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (DT A) (NN mile))
+ schema: (NP 589 {590})  cur: (NP (DT A) (NN mile))  incomplete:
+(VP (VBZ is) (ADJP (ADJP (JJ equal) (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .))))))
+ schema: (VP 606 (ADJP 607))  cur: (VP (VBZ is) obj)  incomplete:
+(S 1 0)
+resolved: (S (NP (DT A) (NN mile)) (VP (VBZ is) (ADJP (ADJP (JJ equal) (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .)))))))
+ schema: (S 608 609)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(DT A)
+			(NN mile))
+		(VP
+			(VBZ is)
+			(ADJP
+				(ADJP
+					(JJ equal)
+					(PP
+						(TO to)
+						(NP
+							(QP
+								(IN about)
+								(CD 1600))
+							(NNS meters)
+							(. .))))))))
+duplicate!
+(ADJP (ADJP (JJ equal) (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .)))))
+(ADJP (JJ equal) (PP (TO to) (NP (QP (IN about) (CD 1600)) (NNS meters) (. .))))
+cleaned: (ROOT
+	(S
+		(NP
+			(DT A)
+			(NN mile))
+		(VP
+			(VBZ is)
+			(ADJP
+				(JJ equal)
 				(PP
 					(TO to)
-					(. ?))))))
+					(NP
+						(QP
+							(IN about)
+							(CD 1600))
+						(NNS meters)
+						(. .)))))))
 
+using lex combiantor rule
+Missing category: NP/(N/PP) asked for by lex
+resolved: (NP (PRP$ His))
+ schema: (NP 610 611)  cur: (NP (PRP$ His) 611)  incomplete: (611, self)
+(NP 0)
+
+using lex combiantor rule
+Unannotated category: N/PP
+resolved: (NP (NN speech))
+ schema: (NP 612 613)  cur: (NP (NN speech) 613)  incomplete: (613, self)
+(N 0)
+
+using fa.f combiantor rule
+(NP (PRP$ His))
+ schema: (NP 610 611)  cur: (NP (PRP$ His) 611)  incomplete: (611, self)
+(NP 0)
+(NP (NN speech))
+ schema: (NP 612 613)  cur: (NP (NN speech) 613)  incomplete: (613, self)
+(N 0)
+resolved: (NP (PRP$ His) (NP (NN speech)))
+ schema: (NP 610 611)  cur: (NP (PRP$ His) obj)  incomplete:
+(NP 0)
+
+using lex combiantor rule
+resolved: (VP (VBD bored))
+ schema: (VP 614 615)  cur: (VP (VBD bored) 615)  incomplete: (615, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (NP (PRP me))
+ schema: (NP 616)  cur: (NP (PRP me))  incomplete:
+
+using fa.f combiantor rule
+(VP (VBD bored))
+ schema: (VP 614 615)  cur: (VP (VBD bored) 615)  incomplete: (615, self)
+(S 1 0)
+(NP (PRP me))
+ schema: (NP 616)  cur: (NP (PRP me))  incomplete:
+resolved: (VP (VBD bored) (NP (PRP me)))
+ schema: (VP 614 615)  cur: (VP (VBD bored) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (. .)
+ schema: {(. 617)}  cur: {(. (. .))}  incomplete:
+
+using misc combiantor rule
+(VP (VBD bored) (NP (PRP me)))
+ schema: (VP 614 615)  cur: (VP (VBD bored) obj)  incomplete:
+(S 1 0)
+(. .)
+ schema: {(. 617)}  cur: {(. (. .))}  incomplete:
+bored .
+resolved: (VP (VBD bored) (NP (PRP me)) (. .))
+ schema: (VP 614 615)  cur: (VP (VBD bored) obj (. .))  incomplete:
+(S 1 0)
+
+using fa.b combiantor rule
+(NP (PRP$ His) (NP (NN speech)))
+ schema: (NP 610 611)  cur: (NP (PRP$ His) obj)  incomplete:
+(NP 0)
+(VP (VBD bored) (NP (PRP me)) (. .))
+ schema: (VP 614 615)  cur: (VP (VBD bored) obj (. .))  incomplete:
+(S 1 0)
+resolved: (S (NP (PRP$ His) (NP (NN speech))) (VP (VBD bored) (NP (PRP me)) (. .)))
+ schema: (S 618 619)  cur: (S obj obj)  incomplete:
+
+before cleaning: (ROOT
+	(S
+		(NP
+			(PRP$ His)
+			(NP
+				(NN speech)))
+		(VP
+			(VBD bored)
+			(NP
+				(PRP me))
+			(. .))))
+cleaned: (ROOT
+	(S
+		(NP
+			(PRP$ His)
+			(NP
+				(NN speech)))
+		(VP
+			(VBD bored)
+			(NP
+				(PRP me))
+			(. .))))
+
+using lex combiantor rule
+resolved: (NP (DT The))
+ schema: (NP 620 {621})  cur: (NP (DT The) {621})  incomplete: ({621}, self)
+
+using lex combiantor rule
+resolved: (Nslash (JJ express))
+ schema: (Nslash 622)  cur: (Nslash (JJ express))  incomplete:
+(N {0} {1}) POS:default
+
+using lex combiantor rule
+resolved: (N (NN train))
+ schema: (N 623)  cur: (N (NN train))  incomplete:
+
+using fa.f combiantor rule
+(Nslash (JJ express))
+ schema: (Nslash 622)  cur: (Nslash (JJ express))  incomplete:
+(N {0} {1}) POS:default
+(N (NN train))
+ schema: (N 623)  cur: (N (NN train))  incomplete:
+resolved: (N (JJ express) (NN train))
+ schema: (N {624} {625})  cur: (N (JJ express) (NN train))  incomplete:
+
+using fa.f combiantor rule
+(NP (DT The))
+ schema: (NP 620 {621})  cur: (NP (DT The) {621})  incomplete: ({621}, self)
+(N (JJ express) (NN train))
+ schema: (N {624} {625})  cur: (N (JJ express) (NN train))  incomplete:
+resolved: (NP (DT The) (JJ express) (NN train))
+ schema: (NP 620 {621})  cur: (NP (DT The) (JJ express) (NN train))  incomplete:
+
+using lex combiantor rule
+resolved: (VP (VBZ does))
+ schema: (VP 626 627)  cur: (VP (VBZ does) 627)  incomplete: (627, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (RB not)
+ schema: {(TEMP 628)}  cur: {(TEMP (RB not))}  incomplete:
+(VP {1} 0)
+(S 1 0)
+
+using cc.b combiantor rule
+(VP (VBZ does))
+ schema: (VP 626 627)  cur: (VP (VBZ does) 627)  incomplete: (627, self)
+(S 1 0)
+(RB not)
+ schema: {(TEMP 628)}  cur: {(TEMP (RB not))}  incomplete:
+(VP {1} 0)
+(S 1 0)
+resolved: (VP (VBZ does) (RB not))
+ schema: (VP 626 627)  cur: (VP (VBZ does) (RB not) 627)  incomplete: (627, self)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (VP (VB stop))
+ schema: (VP 631)  cur: (VP (VB stop))  incomplete:
+(S 1 0)
+
+using fa.f combiantor rule
+(VP (VBZ does) (RB not))
+ schema: (VP 626 627)  cur: (VP (VBZ does) (RB not) 627)  incomplete: (627, self)
+(S 1 0)
+(VP (VB stop))
+ schema: (VP 631)  cur: (VP (VB stop))  incomplete:
+(S 1 0)
+resolved: (VP (VBZ does) (RB not) (VP (VB stop)))
+ schema: (VP 626 627)  cur: (VP (VBZ does) (RB not) obj)  incomplete:
+(S 1 0)
+
+using lex combiantor rule
+resolved: (PP (IN between))
+ schema: (PP 632 633)  cur: (PP (IN between) 633)  incomplete: (633, self)
+(VP {1} 0)
+(S 1 0)
+
+using lex combiantor rule
+resolved: (N (NNP Shibuya))
+ schema: (N 634)  cur: (N (NNP Shibuya))  incomplete:
+
+using unary combiantor rule
+(N (NNP Shibuya))
+ schema: (N 634)  cur: (N (NNP Shibuya))  incomplete:
+Unary schema:
+ schema: (NP {635})  cur: (NP {635})  incomplete: ({635}, self)
+resolved: (NP (NNP Shibuya))
+ schema: (NP {635})  cur: (NP (NNP Shibuya))  incomplete:
+
+using lex combiantor rule
+Missing category: CONJ asked for by lex
