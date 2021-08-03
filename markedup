@@ -340,6 +340,10 @@ PP
   0 PP{_}
   (PP 0)
 
+PR
+  0 PR{_}
+  (ADVP 0)
+
 RRB
   0 RRB{_}
   (RRB 0)
@@ -563,6 +567,16 @@ S[em]/S[dcl]
 
 (S[dcl]\NP)/PP
   2 ((S[dcl]{_}\NP{Y}<1>){_}/PP{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[dcl]\NP)/PR
+  2 ((S[dcl]{_}\NP{Y}<1>){_}/PR{Z}<2>){_}
+  (VP 0 2)
+  (S 1 0)
+
+(S[b]\NP)/PR
+  2 ((S[b]{_}\NP{Y}<1>){_}/PR{Z}<2>){_}
   (VP 0 2)
   (S 1 0)
 
