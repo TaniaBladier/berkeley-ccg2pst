@@ -1,3 +1,16 @@
+Tania: new working command line (no gold ptb file needed)
+
+`python2 convert.py pmb2tag/example.candc -prefix=pmb2tag/example.candc -verbose -method=markedup markedup`
+
+`tania@tania:~/Dropbox/berkeley-ccg2pst/pmb2tag$ python2 ../convert.py example.ccgbank -prefix=example.ccgbank -verbose -method=markedup ../markedup`
+
+`/usr/bin/python3 pmb2tag/visualize_ptb.py`
+
+Tania: choose python
+
+`/usr/bin/python3 evalb.py`
+
+
 This software converts Combinatory Categorial Grammar (CCG) derivations to Phrase Structure Trees (PST).  For a full description of the method, and discussion of results, see:
 
 [Robust Conversion of CCG Derivations to Phrase Structure Trees](https://aclweb.org/anthology/P/P12/P12-2021.pdf),
