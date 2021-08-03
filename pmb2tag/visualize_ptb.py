@@ -8,7 +8,7 @@ file_with_bracketed_ptb_sents = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/co
 
 with open(file_with_bracketed_ptb_sents) as f:
     for n, line in enumerate(f):
-        if n > 7: # visualize the first three trees
+        if n > 7000: # visualize the first three trees
             break
 
         for tree, sent, comment in incrementaltreereader(line):

@@ -28,7 +28,7 @@ def readFile_ccg_prolog(path):
 
         if len(line) == 0 or line.startswith(':-'):
             if len(sentence) > 0:
-                sent_str = ' '.join(sentence)[:-1]
+                sent_str = ' '.join(sentence)[:-1].replace('CONJ', 'conj')
                 sentences.append(sent_str)
                 sentence = []
         else:
@@ -60,7 +60,7 @@ def readFile_ccg_prolog(path):
                     w = '(<' + first_cat + ' ' + ccg_cat + '>'
                     sentence.append(w)
     if len(sentence) > 0:
-            sentences.append(' '.join(sentence)[:-1])
+            sentences.append(' '.join(sentence)[:-1].replace('CONJ', 'conj'))
     return sentences
 
 #input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
