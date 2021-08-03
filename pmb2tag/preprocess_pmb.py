@@ -24,11 +24,11 @@ def readFile_ccg_prolog(path):
     sentences = []
     sentence = []
     for line in open(path, 'r'):
-        line = line.rstrip().replace(',,', '$comma$,')
+        line = line.rstrip().replace(',,', '=comma=,')
 
         if len(line) == 0 or line.startswith(':-'):
             if len(sentence) > 0:
-                sent_str = ' '.join(sentence)[:-1].replace('CONJ', 'conj')
+                sent_str = ' '.join(sentence)[:-1].replace('CONJ', 'conj').replace('=COMMA=',',')
                 sentences.append(sent_str)
                 sentence = []
         else:
@@ -36,7 +36,7 @@ def readFile_ccg_prolog(path):
                 # find the lexical element
                 lex = line.split(', ')[1].replace("'", "").replace('(','-LRB-').replace(')','-RRB-')
 
-                pos_tag = re.sub(r".+pos:'([A-Z.$]+)'.+", r'\1', line)
+                pos_tag = re.sub(r".+pos:'([A-Z.$,]+)'.+", r'\1', line)
 
                 ccg_cat = line.split(',')[0].replace('t(','').strip().upper()
                 ccg_cat = re.sub(r":([A-Z.]+)", lambda m: m.expand(r'[\1]').lower() , ccg_cat)
@@ -56,15 +56,15 @@ def readFile_ccg_prolog(path):
                     ccg_cat = re.sub(r":([A-Z.]+)", lambda m: m.expand(r'[\1]').lower() , ccg_cat)
                     ccg_cat = ccg_cat.split(',')[0]
                     #print(first_cat)
-                    print(ccg_cat)
+                    
                     w = '(<' + first_cat + ' ' + ccg_cat + '>'
                     sentence.append(w)
     if len(sentence) > 0:
-            sentences.append(' '.join(sentence)[:-1].replace('CONJ', 'conj'))
+            sentences.append(' '.join(sentence)[:-1].replace('CONJ', 'conj').replace('=COMMA=',','))
     return sentences
 
-input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
-#input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb-3.0.0-en-gold-p03.parse.tags'
+#input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
+input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb-3.0.0-en-gold-p03.parse.tags'
 
 output_ccgbank_style = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb_in_ccgbank_format.pmb'
 outf = open(output_ccgbank_style, 'w')
