@@ -2,9 +2,9 @@
 from discodop import treebank
 from discodop.treebank import incrementaltreereader
 from discodop.tree import DrawTree
+import sys
 
-
-file_with_bracketed_ptb_sents = '/home/tania/Dropbox/pmb2tag-frames/data/31_pmb_in_ccgbank_format.pmb.auto'
+file_with_bracketed_ptb_sents = sys.argv[1]
 
 with open(file_with_bracketed_ptb_sents) as f:
     for n, line in enumerate(f):

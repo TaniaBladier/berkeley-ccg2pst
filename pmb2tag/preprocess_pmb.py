@@ -1,4 +1,8 @@
-import re
+import re, sys
+
+
+input_ccg_file = sys.argv[1]
+output_ccgbank_style = sys.argv[2]
 
 def right_replace(s, old, new, count):
     return (s[::-1].replace(old[::-1], new[::-1], count))[::-1]
@@ -63,10 +67,7 @@ def readFile_ccg_prolog(path):
             sentences.append(' '.join(sentence)[:-1].replace('CONJ', 'conj').replace('=COMMA=',','))
     return sentences
 
-#input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
-input_ccg_file = "/home/tania/Dropbox/pmb2tag-frames/data/pmb-3.0.0-en-gold-p31.parse.tags"
 
-output_ccgbank_style = '/home/tania/Dropbox/pmb2tag-frames/data/31_pmb_in_ccgbank_format.pmb'
 outf = open(output_ccgbank_style, 'w')
 
 ccg_trees_lst = readFile_ccg_prolog(input_ccg_file)
