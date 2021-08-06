@@ -4,6 +4,8 @@ Tania: new working command line (no gold ptb file needed)
 
 `tania@tania:~/Dropbox/berkeley-ccg2pst/pmb2tag$ python2 ../convert.py example.ccgbank -prefix=example.ccgbank -verbose -method=markedup ../markedup`
 
+`python2 /home/tania/Dropbox/pmb2tag-frames/berkeley-ccg2pst/convert.py /home/tania/Dropbox/pmb2tag-frames/data/31_pmb_in_ccgbank_format.pmb -prefix=/home/tania/Dropbox/pmb2tag-frames/data/31_pmb_in_ccgbank_format.pmb -verbose -method=markedup /home/tania/Dropbox/pmb2tag-frames/berkeley-ccg2pst/markedup`
+
 `/usr/bin/python3 pmb2tag/visualize_ptb.py`
 
 Tania: choose python

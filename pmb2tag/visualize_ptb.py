@@ -4,7 +4,7 @@ from discodop.treebank import incrementaltreereader
 from discodop.tree import DrawTree
 
 
-file_with_bracketed_ptb_sents = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/converted.pmb.auto'
+file_with_bracketed_ptb_sents = '/home/tania/Dropbox/pmb2tag-frames/data/31_pmb_in_ccgbank_format.pmb.auto'
 
 with open(file_with_bracketed_ptb_sents) as f:
     for n, line in enumerate(f):

@@ -64,9 +64,9 @@ def readFile_ccg_prolog(path):
     return sentences
 
 #input_ccg_file = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/example.pmb'
-input_ccg_file = "/home/tania/ownCloud/lsgn_python3/09_PMB_DRS_Parsing/pmb2tsv (tania's conflicted copy 2021-07-11)/pmb-3.0.0-en-gold-p01.parse.tags"
+input_ccg_file = "/home/tania/Dropbox/pmb2tag-frames/data/pmb-3.0.0-en-gold-p31.parse.tags"
 
-output_ccgbank_style = '/home/tania/Dropbox/berkeley-ccg2pst/pmb2tag/pmb_in_ccgbank_format.pmb'
+output_ccgbank_style = '/home/tania/Dropbox/pmb2tag-frames/data/31_pmb_in_ccgbank_format.pmb'
 outf = open(output_ccgbank_style, 'w')
 
 ccg_trees_lst = readFile_ccg_prolog(input_ccg_file)
